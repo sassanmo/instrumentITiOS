@@ -15,23 +15,38 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        let pictureUrl = URL(string: "https://upload.wikimedia.org/wikipedia/commons/9/98/The_earth_at_night_(2).jpg")!
+        var request = NSMutableURLRequest(url: pictureUrl)
+        request.httpMethod = "GET"
+        let session = URLSession.shared;
+        let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in
+            do{
+                if let httpResponse = response as? HTTPURLResponse {
+                    if (httpResponse.statusCode == 200) {
+                        if let receivedData = data {
+                            //completionHandler(data, response, error)
+                        }
+                    } else {
+                        //completionHandler(data, response, error)
+                    }
+                }
+            } catch {
+                print(error)
+                //completionHandler(data, response, error)
+            }
+        })
+        task.resume()
+        
+    }
+    
+    func getImage(request: NSMutableURLRequest, completion: @escaping (Data, Int)->()) -> Void {
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func doSomething() {
-        // The agent starts tracking the doSomething function
-        let invocationId = agent.trackInvocation()
-        
-        for i in 0...UInt16.max {
-            print(i)
-        }
-        
-        // The agent stops tracking the doSomething function
-        agent.closeInvocation(id: invocationId)
     }
 
 

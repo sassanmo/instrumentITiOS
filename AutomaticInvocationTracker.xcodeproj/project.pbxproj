@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2747F8B91ECB40A6008186D3 /* SwizzledUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747F8B81ECB40A6008186D3 /* SwizzledUIViewController.swift */; };
+		2747F92C1ECF07C6008186D3 /* NSURLRequestTraceInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747F92B1ECF07C6008186D3 /* NSURLRequestTraceInjection.swift */; };
 		27AB4E7C1EC9DB1900E5101E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4E7B1EC9DB1900E5101E /* AppDelegate.swift */; };
 		27AB4E7E1EC9DB1900E5101E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4E7D1EC9DB1900E5101E /* ViewController.swift */; };
 		27AB4E811EC9DB1900E5101E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27AB4E7F1EC9DB1900E5101E /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		27AB4EC11ECA06E900E5101E /* BatteryLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EBD1ECA06E900E5101E /* BatteryLevel.swift */; };
 		27AB4EC31ECA06E900E5101E /* DiskMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EBF1ECA06E900E5101E /* DiskMetric.swift */; };
 		27AB4EC41ECA06E900E5101E /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EC01ECA06E900E5101E /* NetworkReachability.swift */; };
+		27ED22F31ECF2E6F0082BA1D /* URLSessionInvocationInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22F21ECF2E6F0082BA1D /* URLSessionInvocationInjection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		2747F8B81ECB40A6008186D3 /* SwizzledUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwizzledUIViewController.swift; sourceTree = "<group>"; };
+		2747F92B1ECF07C6008186D3 /* NSURLRequestTraceInjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURLRequestTraceInjection.swift; sourceTree = "<group>"; };
 		27AB4E781EC9DB1900E5101E /* AutomaticInvocationTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutomaticInvocationTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27AB4E7B1EC9DB1900E5101E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27AB4E7D1EC9DB1900E5101E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +76,7 @@
 		27AB4EBD1ECA06E900E5101E /* BatteryLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryLevel.swift; sourceTree = "<group>"; };
 		27AB4EBF1ECA06E900E5101E /* DiskMetric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskMetric.swift; sourceTree = "<group>"; };
 		27AB4EC01ECA06E900E5101E /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		27ED22F21ECF2E6F0082BA1D /* URLSessionInvocationInjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionInvocationInjection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,8 @@
 				27AB4EBB1ECA054500E5101E /* NativeRessources.h */,
 				27AB4EB91ECA054500E5101E /* AutomaticInvocationTracker-Bridging-Header.h */,
 				2747F8B81ECB40A6008186D3 /* SwizzledUIViewController.swift */,
+				2747F92B1ECF07C6008186D3 /* NSURLRequestTraceInjection.swift */,
+				27ED22F21ECF2E6F0082BA1D /* URLSessionInvocationInjection.swift */,
 			);
 			name = Agent;
 			sourceTree = "<group>";
@@ -313,6 +319,7 @@
 			files = (
 				27AB4EB81ECA049000E5101E /* MetricsController.swift in Sources */,
 				27AB4E841EC9DB1900E5101E /* AutomaticInvocationTracker.xcdatamodeld in Sources */,
+				27ED22F31ECF2E6F0082BA1D /* URLSessionInvocationInjection.swift in Sources */,
 				2747F8B91ECB40A6008186D3 /* SwizzledUIViewController.swift in Sources */,
 				27AB4EB61ECA039E00E5101E /* InvocationSerializer.swift in Sources */,
 				27AB4EAE1EC9DB3A00E5101E /* Invocation.swift in Sources */,
@@ -322,6 +329,7 @@
 				27AB4EB21EC9DC4600E5101E /* Agent.swift in Sources */,
 				27AB4EC41ECA06E900E5101E /* NetworkReachability.swift in Sources */,
 				27AB4EB41EC9EEEA00E5101E /* InvocationMapper.swift in Sources */,
+				2747F92C1ECF07C6008186D3 /* NSURLRequestTraceInjection.swift in Sources */,
 				27AB4E7E1EC9DB1900E5101E /* ViewController.swift in Sources */,
 				27AB4EBC1ECA054500E5101E /* NativeRessources.c in Sources */,
 				27AB4E7C1EC9DB1900E5101E /* AppDelegate.swift in Sources */,

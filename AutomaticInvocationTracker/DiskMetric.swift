@@ -35,6 +35,7 @@ class DiskMetric: NSObject {
     }
     
     class func getUsedDiskPercentage() -> Double {
+        
         return Double(DiskMetric.usedDiskSpaceInBytes) / Double(DiskMetric.totalDiskSpaceInBytes)
     }
     

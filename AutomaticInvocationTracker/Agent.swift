@@ -13,7 +13,7 @@ class Agent: NSObject {
     /// Strores the Agent properties
     var agentProperties: [String: Any]?
     
-    var agent: Agent?
+    static var agent: Agent?
     
     var invocationMapper: InvocationMapper?
     
@@ -28,7 +28,15 @@ class Agent: NSObject {
             }
         }
         invocationMapper = InvocationMapper()
-        agent = self
+        Agent.agent = self
+    }
+    
+    static func getInstance() -> Agent {
+        if Agent.agent == nil {
+            return Agent()
+        } else {
+            return Agent.agent!
+        }
     }
     
     func setAgentConfiguration(properties: [(String, Any)]? = nil) {
@@ -58,4 +66,14 @@ class Agent: NSObject {
     static func allowedProperty(property: String) -> Bool {
         return true
     }
+    
+    func injectHeaderAttributes(request: inout NSMutableURLRequest) {
+        if let lastInvocation = invocationMapper?.invocationStack?.last {
+            let id = lastInvocation.id
+            let traceId = lastInvocation.traceId
+            request.addValue(decimalToHex(decimal: id), forHTTPHeaderField: "x-inspectit-spanid")
+            request.addValue(decimalToHex(decimal: traceId!), forHTTPHeaderField: "x-inspectit-traceid")
+        }
+    }
+    
 }

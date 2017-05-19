@@ -24,6 +24,10 @@ public func getTimestamp(multiplier: Double? = defaultTimestampMultiplier) -> UI
     return UInt64(NSDate().timeIntervalSince1970 * multiplier!)
 }
 
+public func decimalToHex(decimal: UInt64) -> String {
+    return String(decimal, radix: 16)
+}
+
 public func calculateUuid() -> UInt64 {
     let uuid1 : UInt64 = UInt64(UUID().hashValue)
     let uuid2 : UInt64 = UInt64(UUID().hashValue)
