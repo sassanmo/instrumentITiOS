@@ -30,13 +30,13 @@ extension UIViewController {
     
     func myViewWillAppear(animated: Bool) {
         // The agent starts tracking the viewWillAppear function
-        let invocationId = Agent().trackInvocation()
+        // let invocationId = Agent().trackInvocation()
         
         // Executes the actual viewWillAppear function
         self.myViewWillAppear(animated: animated)
         
         // The agent stops tracking the viewWillAppear function
-        Agent().closeInvocation(id: invocationId)
+        // Agent().closeInvocation(id: invocationId)
     }
     
 }

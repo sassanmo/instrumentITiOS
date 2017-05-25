@@ -5,10 +5,10 @@ import SystemConfiguration
 import CoreTelephony
 
 
-class NetworkReachability {
+class NetworkReachability: NSObject {
     
     private static var defaultRoute : SCNetworkReachability!
-    init() {
+    override init() {
         var za = sockaddr_in()
         bzero(&za, MemoryLayout.size(ofValue: za))
         za.sin_len =  UInt8(MemoryLayout.size(ofValue: za))
@@ -21,7 +21,7 @@ class NetworkReachability {
         }
     }
     
-    static func getConnectionInformation() -> (String, String) {
+    class func getConnectionInformation() -> (String, String) {
         var flags : SCNetworkReachabilityFlags = SCNetworkReachabilityFlags(rawValue: 0)
         if !SCNetworkReachabilityGetFlags(NetworkReachability.defaultRoute, &flags) {
             return ("", "")

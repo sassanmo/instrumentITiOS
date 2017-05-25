@@ -23,7 +23,7 @@ class Invocation: NSObject {
     var name : String
     
     /// Describes the object/class holding the method
-    var holder : String
+    var holder : String?
     
     /// Describes the framework where the method is located in
     /// By default the framework is the project name.
@@ -39,6 +39,13 @@ class Invocation: NSObject {
     var endTime : UInt64?
     
     var ended : Bool = false
+    
+    init(name: String) {
+        self.id = calculateUuid()
+        self.name = name
+        self.threadName = Thread.current.description
+        self.startTime = getTimestamp()
+    }
     
     init(name: String, holder: String) {
         self.id = calculateUuid()

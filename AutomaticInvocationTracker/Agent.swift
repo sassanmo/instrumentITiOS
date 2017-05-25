@@ -17,6 +17,8 @@ class Agent: NSObject {
     
     var invocationMapper: InvocationMapper?
     
+    var locationHandler: LocationHandler?
+    
     init(properties: [(String, Any)]? = nil) {
         super.init()
         if let properties = properties {
@@ -27,8 +29,10 @@ class Agent: NSObject {
                 }
             }
         }
+        locationHandler = LocationHandler()
         invocationMapper = InvocationMapper()
         Agent.agent = self
+        locationHandler?.requestLocationAuthorization()
     }
     
     static func getInstance() -> Agent {
@@ -49,10 +53,9 @@ class Agent: NSObject {
         }
     }
     
-    func trackInvocation(function: String = #function, file: String = #file) -> UInt64 {
+    func trackInvocation(function: String = #function, file: String = #file) {
         let invocation = Invocation(name: function, holder: file)
         invocationMapper?.pushInvocation(invocation: invocation)
-        return invocation.id
     }
     
     func closeInvocation(id: UInt64? = nil) {
@@ -60,6 +63,34 @@ class Agent: NSObject {
             //return invocation.id
         }
         //return nil
+    }
+    
+    func trackRemoteCall(url: String) -> UInt64 {
+        let remotecall = RemoteCall(url: url)
+        invocationMapper?.mapRemoteCall(remoteCall: remotecall)
+        return remotecall.id
+    }
+    
+    func closeRemoteCall(id: UInt64, response: URLResponse?, error: Error?) {
+        if var remotecall = invocationMapper?.remotecallMap?[id] {
+            invocationMapper?.remotecallMap?[id] = nil
+            setRemoteCallEndProperties(remotecall: &remotecall)
+            remotecall.closeRemoteCall(response: response, error: error)
+        }
+    }
+    
+    private func setRemoteCallStartProperties(remotecall: inout RemoteCall) {
+        remotecall.startPosition = locationHandler?.getUsersPosition()
+        remotecall.startSSID = SSIDSniffer.getSSID()
+        remotecall.startConnectivity = NetworkReachability.getConnectionInformation().0
+        remotecall.startProvider = NetworkReachability.getConnectionInformation().1
+    }
+    
+    private func setRemoteCallEndProperties(remotecall: inout RemoteCall) {
+        remotecall.endPosition = locationHandler?.getUsersPosition()
+        remotecall.endSSID = SSIDSniffer.getSSID()
+        remotecall.endConnectivity = NetworkReachability.getConnectionInformation().0
+        remotecall.endProvider = NetworkReachability.getConnectionInformation().1
     }
     
     /// TODO:

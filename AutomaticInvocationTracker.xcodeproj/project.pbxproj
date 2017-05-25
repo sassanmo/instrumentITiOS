@@ -28,6 +28,9 @@
 		27AB4EC31ECA06E900E5101E /* DiskMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EBF1ECA06E900E5101E /* DiskMetric.swift */; };
 		27AB4EC41ECA06E900E5101E /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EC01ECA06E900E5101E /* NetworkReachability.swift */; };
 		27ED22F31ECF2E6F0082BA1D /* URLSessionInvocationInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22F21ECF2E6F0082BA1D /* URLSessionInvocationInjection.swift */; };
+		27ED22F51ED251200082BA1D /* RemoteCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22F41ED251200082BA1D /* RemoteCall.swift */; };
+		27ED22F91ED25C3C0082BA1D /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22F81ED25C3C0082BA1D /* LocationHandler.swift */; };
+		27ED22FB1ED25CF80082BA1D /* SSIDSniffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22FA1ED25CF80082BA1D /* SSIDSniffer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		27AB4EBF1ECA06E900E5101E /* DiskMetric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskMetric.swift; sourceTree = "<group>"; };
 		27AB4EC01ECA06E900E5101E /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		27ED22F21ECF2E6F0082BA1D /* URLSessionInvocationInjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionInvocationInjection.swift; sourceTree = "<group>"; };
+		27ED22F41ED251200082BA1D /* RemoteCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteCall.swift; sourceTree = "<group>"; };
+		27ED22F81ED25C3C0082BA1D /* LocationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
+		27ED22FA1ED25CF80082BA1D /* SSIDSniffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSIDSniffer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,7 @@
 		27AB4E7A1EC9DB1900E5101E /* AutomaticInvocationTracker */ = {
 			isa = PBXGroup;
 			children = (
+				27ED22FC1ED78A250082BA1D /* Swizzling */,
 				27AB4EAC1EC9DB2700E5101E /* Agent */,
 				27AB4E7B1EC9DB1900E5101E /* AppDelegate.swift */,
 				27AB4E7D1EC9DB1900E5101E /* ViewController.swift */,
@@ -173,10 +180,20 @@
 				27AB4EBB1ECA054500E5101E /* NativeRessources.h */,
 				27AB4EB91ECA054500E5101E /* AutomaticInvocationTracker-Bridging-Header.h */,
 				2747F8B81ECB40A6008186D3 /* SwizzledUIViewController.swift */,
+				27ED22F41ED251200082BA1D /* RemoteCall.swift */,
+				27ED22F81ED25C3C0082BA1D /* LocationHandler.swift */,
+				27ED22FA1ED25CF80082BA1D /* SSIDSniffer.swift */,
+			);
+			name = Agent;
+			sourceTree = "<group>";
+		};
+		27ED22FC1ED78A250082BA1D /* Swizzling */ = {
+			isa = PBXGroup;
+			children = (
 				2747F92B1ECF07C6008186D3 /* NSURLRequestTraceInjection.swift */,
 				27ED22F21ECF2E6F0082BA1D /* URLSessionInvocationInjection.swift */,
 			);
-			name = Agent;
+			name = Swizzling;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +337,7 @@
 				27AB4EB81ECA049000E5101E /* MetricsController.swift in Sources */,
 				27AB4E841EC9DB1900E5101E /* AutomaticInvocationTracker.xcdatamodeld in Sources */,
 				27ED22F31ECF2E6F0082BA1D /* URLSessionInvocationInjection.swift in Sources */,
+				27ED22F91ED25C3C0082BA1D /* LocationHandler.swift in Sources */,
 				2747F8B91ECB40A6008186D3 /* SwizzledUIViewController.swift in Sources */,
 				27AB4EB61ECA039E00E5101E /* InvocationSerializer.swift in Sources */,
 				27AB4EAE1EC9DB3A00E5101E /* Invocation.swift in Sources */,
@@ -327,12 +345,14 @@
 				27AB4EB01EC9DBB500E5101E /* Util.swift in Sources */,
 				27AB4EC11ECA06E900E5101E /* BatteryLevel.swift in Sources */,
 				27AB4EB21EC9DC4600E5101E /* Agent.swift in Sources */,
+				27ED22F51ED251200082BA1D /* RemoteCall.swift in Sources */,
 				27AB4EC41ECA06E900E5101E /* NetworkReachability.swift in Sources */,
 				27AB4EB41EC9EEEA00E5101E /* InvocationMapper.swift in Sources */,
 				2747F92C1ECF07C6008186D3 /* NSURLRequestTraceInjection.swift in Sources */,
 				27AB4E7E1EC9DB1900E5101E /* ViewController.swift in Sources */,
 				27AB4EBC1ECA054500E5101E /* NativeRessources.c in Sources */,
 				27AB4E7C1EC9DB1900E5101E /* AppDelegate.swift in Sources */,
+				27ED22FB1ED25CF80082BA1D /* SSIDSniffer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
