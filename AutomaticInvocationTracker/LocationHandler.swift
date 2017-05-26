@@ -11,7 +11,12 @@ class LocationHandler {
     
     init() {
         let appDelegate  = UIApplication.shared.delegate as! AppDelegate
-        if let locationManagerDelegate = appDelegate.window!.rootViewController as? CLLocationManagerDelegate {
+        var appwindow: UIWindow? = appDelegate.window
+        guard (appwindow != nil) else {
+            appwindow = UIWindow(frame: UIScreen.main.bounds)
+            return
+        }
+        if let locationManagerDelegate = appwindow?.rootViewController as? CLLocationManagerDelegate {
             rootViewController = locationManagerDelegate
         }
         locationManager.delegate = rootViewController

@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
 
         let pictureUrl = URL(string: "https://upload.wikimedia.org/wikipedia/commons/9/98/The_earth_at_night_(2).jpg")!
-        var request = NSMutableURLRequest(url: pictureUrl)
+        let request = NSMutableURLRequest(url: pictureUrl)
         request.httpMethod = "GET"
         let session = URLSession.shared;
         let task = session.dataTask(with: request as URLRequest, completionHandler: {data, response, error -> Void in
