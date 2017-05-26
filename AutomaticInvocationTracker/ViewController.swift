@@ -14,6 +14,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+    
+        
         // Do any additional setup after loading the view, typically from a nib.
 
         let pictureUrl = URL(string: "https://upload.wikimedia.org/wikipedia/commons/9/98/The_earth_at_night_(2).jpg")!

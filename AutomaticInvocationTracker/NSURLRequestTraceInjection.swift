@@ -34,9 +34,9 @@ extension NSURLRequest {
                       cachePolicy: NSURLRequest.CachePolicy,
                       timeoutInterval: TimeInterval) -> NSMutableURLRequest {
         let agent = Agent.getInstance()
-        let _ = agent.trackInvocation()
-        var request: NSMutableURLRequest = injectedInit(url: url, cachePolicy: cachePolicy, timeoutInterval: timeoutInterval)
-        agent.closeInvocation()
+        let invocationId = agent.trackInvocation()
+        let request: NSMutableURLRequest = injectedInit(url: url, cachePolicy: cachePolicy, timeoutInterval: timeoutInterval)
+        agent.closeInvocation(id: invocationId)
         return request
     }
 

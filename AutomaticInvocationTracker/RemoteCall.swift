@@ -35,19 +35,18 @@ class RemoteCall: Invocation {
     
     var url : String?
     
-    init(url: String) {
-        super.init(name: url)
+    init(name: String, holder: String, url: String) {
+        super.init(name: name, holder: holder)
         self.url = url
     }
     
+    // TODO: Response and error
     func closeRemoteCall(response: URLResponse?, error: Error?) {
-        
         self.ended = true
         self.endTime = getTimestamp()
         if let endtime = self.endTime, let starttime = self.startTime {
             self.duration = endtime - starttime
         }
-        
     }
 
 }

@@ -19,6 +19,8 @@ class Agent: NSObject {
     
     var locationHandler: LocationHandler?
     
+    var networkReachability: NetworkReachability?
+    
     init(properties: [(String, Any)]? = nil) {
         super.init()
         if let properties = properties {
@@ -31,6 +33,7 @@ class Agent: NSObject {
         }
         locationHandler = LocationHandler()
         invocationMapper = InvocationMapper()
+        networkReachability = NetworkReachability()
         Agent.agent = self
         locationHandler?.requestLocationAuthorization()
     }
@@ -53,20 +56,18 @@ class Agent: NSObject {
         }
     }
     
-    func trackInvocation(function: String = #function, file: String = #file) {
+    func trackInvocation(function: String = #function, file: String = #file) -> UInt64 {
         let invocation = Invocation(name: function, holder: file)
-        invocationMapper?.pushInvocation(invocation: invocation)
+        invocationMapper?.addInvocation(invocation: invocation)
+        return invocation.id
     }
     
-    func closeInvocation(id: UInt64? = nil) {
-        if let invocation = invocationMapper?.popInvocation(id: id) {
-            //return invocation.id
-        }
-        //return nil
+    func closeInvocation(id: UInt64) {
+        
     }
     
-    func trackRemoteCall(url: String) -> UInt64 {
-        let remotecall = RemoteCall(url: url)
+    func trackRemoteCall(function: String = #function, file: String = #file, url: String) -> UInt64 {
+        let remotecall = RemoteCall(name: function, holder: file, url: url)
         invocationMapper?.mapRemoteCall(remoteCall: remotecall)
         return remotecall.id
     }
@@ -93,16 +94,22 @@ class Agent: NSObject {
         remotecall.endProvider = NetworkReachability.getConnectionInformation().1
     }
     
+    func setRemoteCallAsChild(id: UInt64) {
+        if let remoteCall = invocationMapper?.remotecallMap?[id] {
+            invocationMapper?.childMap?[remoteCall.threadId] = remoteCall
+        }
+    }
+    
     /// TODO:
     static func allowedProperty(property: String) -> Bool {
         return true
     }
     
-    func injectHeaderAttributes(request: inout NSMutableURLRequest) {
-        if let lastInvocation = invocationMapper?.invocationStack?.last {
-            let id = lastInvocation.id
+    func injectHeaderAttributes(id: UInt64, request: inout NSMutableURLRequest) {
+        if let lastInvocation = invocationMapper?.remotecallMap?[id] {
+            let spanid = lastInvocation.id
             let traceId = lastInvocation.traceId
-            request.addValue(decimalToHex(decimal: id), forHTTPHeaderField: "x-inspectit-spanid")
+            request.addValue(decimalToHex(decimal: spanid), forHTTPHeaderField: "x-inspectit-spanid")
             request.addValue(decimalToHex(decimal: traceId!), forHTTPHeaderField: "x-inspectit-traceid")
         }
     }

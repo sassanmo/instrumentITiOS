@@ -23,14 +23,16 @@ class Invocation: NSObject {
     var name : String
     
     /// Describes the object/class holding the method
-    var holder : String?
+    var holder : String
     
     /// Describes the framework where the method is located in
     /// By default the framework is the project name.
     /// UIViewController functions e.g. are storing UIKit here
     //  var framework : String
     
-    var threadName : String?
+    var threadName : String
+    
+    var threadId : UInt
     
     var duration : UInt64?
     
@@ -40,18 +42,22 @@ class Invocation: NSObject {
     
     var ended : Bool = false
     
-    init(name: String) {
-        self.id = calculateUuid()
-        self.name = name
-        self.threadName = Thread.current.description
-        self.startTime = getTimestamp()
+    convenience init(name: String) {
+        self.init(name: name, holder: "")
     }
     
     init(name: String, holder: String) {
         self.id = calculateUuid()
         self.name = name
         self.holder = holder
-        self.threadName = Thread.current.description
+        
+        let threadDescription = Thread.current.description
+        var s = threadDescription.components(separatedBy: "number = ")
+        var s1 = s[1].components(separatedBy: ", name = ")
+        self.threadId = UInt(s1[0])!
+        var s2 = s1[1].components(separatedBy: "}")
+        self.threadName = s2[0]
+        
         self.startTime = getTimestamp()
     }
     
@@ -64,20 +70,25 @@ class Invocation: NSObject {
     }
     
     /// returns: updated parent
-    func setInvocationRelation(parent: Invocation? = nil) -> Invocation? {
-        if let parentInvocation = parent {
-            parentInvocation.childrenIds?.append(self.id)
-            self.parentId = parentInvocation.id
-            return parentInvocation
-        } else {
-            self.parentId = self.id
-            return nil
-        }
+    func setInvocationRelation(parent: inout Invocation) {
+        parent.childrenIds?.append(self.id)
+        self.parentId = parent.id
+        self.traceId = parent.traceId
     }
     
-    func setRootProperies() {
+    func setInvocationAsRoot() {
         self.traceId = self.id
         self.parentId = self.id
+    }
+    
+    func getThreadProperties() -> (UInt, String) {
+        let threadDescription = Thread.current.description
+        var s = threadDescription.components(separatedBy: "number = ")
+        var s1 = s[1].components(separatedBy: ", name = ")
+        let threadId = UInt(s1[0])
+        var s2 = s1[1].components(separatedBy: "}")
+        let threadName = s2[0]
+        return (threadId!, threadName)
     }
     
     override var description: String {

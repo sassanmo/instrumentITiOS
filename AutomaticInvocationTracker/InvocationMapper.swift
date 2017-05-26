@@ -10,60 +10,73 @@ import UIKit
 
 class InvocationMapper: NSObject {
     
-    var invocationStack : [Invocation]?
+    var invocationMap : [UInt64 : Invocation]?
+    
+    var invocationStackMap : [UInt : [Invocation]]?
+    
+    var childMap : [UInt : Invocation]?
     
     var remotecallMap : [UInt64 : RemoteCall]?
     
-    var closedInvocations : [Invocation]?
+    var closedTraces : [[Invocation]]?
     
     override init() {
-        invocationStack = [Invocation]()
+        invocationMap = [UInt64 : Invocation]()
+        invocationStackMap = [UInt : [Invocation]]()
+        childMap = [UInt : Invocation]()
         remotecallMap = [UInt64 : RemoteCall]()
-        closedInvocations = [Invocation]()
+        closedTraces = [[Invocation]]()
     }
     
-    func pushInvocation(invocation: Invocation) {
-        if invocationStack?.count == 0 {
-            invocation.setRootProperies()
+    func addInvocation(invocation: Invocation) {
+        if var parent = childMap?[invocation.threadId] {
+            invocation.setInvocationRelation(parent: &parent)
         } else {
-            let parentInvocation = invocationStack?.popLast()
-            if let updatedParent = invocation.setInvocationRelation(parent: parentInvocation) {
-                invocationStack?.append(updatedParent)
-            }
+            invocation.setInvocationAsRoot()
         }
-        invocationStack?.append(invocation)
+        childMap?[invocation.threadId] = invocation
+        invocationMap?[invocation.id] = invocation
+        if invocationStackMap?[invocation.threadId] == nil {
+            invocationStackMap?[invocation.threadId] = [Invocation]()
+        }
+        invocationStackMap?[invocation.threadId]?.append(invocation)
     }
     
-    func popInvocation(id: UInt64? = nil) -> Invocation? {
-        if let invocationID = id {
-            for (index, invocation) in invocationStack!.enumerated() {
-                if invocation.id == invocationID {
-                    if let closedInvocation = invocationStack?.remove(at: index) {
-                        closedInvocation.closeInvocation()
-                        closedInvocations?.append(closedInvocation)
-                        return closedInvocation
+    func removeInvocation(id: UInt64) {
+        if let invocation = invocationMap?[id] {
+            if childMap?[invocation.threadId]?.id == invocation.id {
+                invocation.closeInvocation()
+                childMap?[invocation.threadId] = nil
+                if invocation.id == invocation.parentId {
+                    closeTrace(threadId: invocation.threadId)
+                } else {
+                    if let parent = invocationMap?[invocation.parentId!] {
+                        childMap?[invocation.threadId] = parent
+                    } else {
+                        print("[ERROR] parent invocation with id \(invocation.parentId) not found")
                     }
                 }
+            } else {
+                print("[ERROR] invocation is not last child")
             }
         } else {
-            if let closedInvocation = invocationStack?.popLast() {
-                closedInvocation.closeInvocation()
-                closedInvocations?.append(closedInvocation)
-                return closedInvocation
-            }
+            print("[ERROR] invocation with id \(id) not found")
         }
-        return nil
+    }
+    
+    func closeTrace(threadId: UInt) {
+        if let trace = invocationStackMap?[threadId] {
+            closedTraces?.append(trace)
+        }
     }
     
     func mapRemoteCall(remoteCall: RemoteCall) {
-        if invocationStack?.count == 0 {
-            remoteCall.setRootProperies()
+        if var parent = childMap?[remoteCall.threadId] {
+            remoteCall.setInvocationRelation(parent: &parent)
         } else {
-            let parentInvocation = invocationStack?.popLast()
-            if let updatedParent = remoteCall.setInvocationRelation(parent: parentInvocation) {
-                invocationStack?.append(updatedParent)
-            }
+            remoteCall.setInvocationAsRoot()
         }
+        invocationMap?[remoteCall.id] = remoteCall
         remotecallMap?[remoteCall.id] = remoteCall
     }
 

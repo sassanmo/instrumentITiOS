@@ -32,14 +32,14 @@ extension URLSession {
     
     func injectedDataTask(request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
         let agent = Agent.getInstance()
-        agent.trackInvocation()
         let remotecallId = agent.trackRemoteCall(url: request.url?.absoluteString ?? "")
         print("start request")
         var mutableRequest: NSMutableURLRequest = (request as NSURLRequest).mutableCopy() as! NSMutableURLRequest
-        agent.injectHeaderAttributes(request: &mutableRequest)
+        agent.injectHeaderAttributes(id: remotecallId, request: &mutableRequest)
         let dataTask = injectedDataTask(request: mutableRequest as URLRequest, completionHandler: {data, response, error -> Void in
+            agent.setRemoteCallAsChild(id: remotecallId)
             completionHandler(data, response, error)
-            //agent.closeInvocation(id: invocationId)
+            agent.closeRemoteCall(id: remotecallId, response: response, error: error)
             print("close request")
         })
         return dataTask
