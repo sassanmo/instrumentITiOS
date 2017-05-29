@@ -28,12 +28,15 @@ class Agent: NSObject {
     /// Collects device Infromation in a specific time interval
     var metricsConrtoller: MetricsController
     
+    var restManager: RestManager
+    
     init(properties: [(String, Any)]? = nil) {
         agentProperties = [String: Any]()
         invocationMapper = InvocationMapper()
         dataStorage = DataStorage()
         metricsConrtoller = MetricsController()
         invocationSerializer = InvocationSerializer(invocationMapper: invocationMapper, metricsConroller: metricsConrtoller)
+        restManager = RestManager()
         super.init()
         
         if let properties = properties {
@@ -128,7 +131,19 @@ class Agent: NSObject {
     }
     
     func spansDispatch() {
-        
+        if invocationSerializer.serializedInvocations.count != 0 {
+            var invocationBuffer = invocationSerializer.serializedInvocations
+            invocationSerializer.serializedInvocations = [String]()
+            for (index, item) in invocationBuffer.enumerated() {
+                restManager.httpPostRequest(path: Constants.HOST, body: item, completion: {error -> Void in
+                    if error {
+                        self.invocationSerializer.serializedInvocations.append(item)
+                    } else {
+                        invocationBuffer.remove(at: index)
+                    }
+                })
+            }
+        }
     }
     
     /// Loads the Agent ID whitch will be created once

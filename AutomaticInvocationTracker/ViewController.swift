@@ -28,16 +28,13 @@ class ViewController: UIViewController {
             do{
                 if let httpResponse = response as? HTTPURLResponse {
                     if (httpResponse.statusCode == 200) {
-                        if let receivedData = data {
+                        if data != nil {
                             //completionHandler(data, response, error)
                         }
                     } else {
                         //completionHandler(data, response, error)
                     }
                 }
-            } catch {
-                print(error)
-                //completionHandler(data, response, error)
             }
         })
         task.resume()
