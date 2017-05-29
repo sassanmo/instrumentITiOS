@@ -29,7 +29,13 @@ public func decimalToHex(decimal: UInt64) -> String {
 }
 
 public func calculateUuid() -> UInt64 {
-    let uuid1 : UInt64 = UInt64(UUID().hashValue)
-    let uuid2 : UInt64 = UInt64(UUID().hashValue)
-    return uuid1 << 0x20 | uuid2
+//    let uuid1 : UInt64 = UInt64(UUID().hashValue)
+//    let uuid2 : UInt64 = UInt64(UUID().hashValue)
+//    return uuid1 << 0x20 | uuid2
+    let hex = UUID().uuidString
+        .components(separatedBy: "-")
+        .suffix(2)
+        .joined()
+    
+    return UInt64(hex, radix: 0x10)!
 }

@@ -31,6 +31,7 @@
 		27ED22F51ED251200082BA1D /* RemoteCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22F41ED251200082BA1D /* RemoteCall.swift */; };
 		27ED22F91ED25C3C0082BA1D /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22F81ED25C3C0082BA1D /* LocationHandler.swift */; };
 		27ED22FB1ED25CF80082BA1D /* SSIDSniffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22FA1ED25CF80082BA1D /* SSIDSniffer.swift */; };
+		27ED22FE1EDCDE1B0082BA1D /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22FD1EDCDE1B0082BA1D /* DataStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		27ED22F41ED251200082BA1D /* RemoteCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteCall.swift; sourceTree = "<group>"; };
 		27ED22F81ED25C3C0082BA1D /* LocationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
 		27ED22FA1ED25CF80082BA1D /* SSIDSniffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSIDSniffer.swift; sourceTree = "<group>"; };
+		27ED22FD1EDCDE1B0082BA1D /* DataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,22 +169,17 @@
 		27AB4EAC1EC9DB2700E5101E /* Agent */ = {
 			isa = PBXGroup;
 			children = (
+				27ED22FF1EDCE17A0082BA1D /* Metrics */,
 				27AB4EAD1EC9DB3A00E5101E /* Invocation.swift */,
 				27AB4EAF1EC9DBB500E5101E /* Util.swift */,
 				27AB4EB11EC9DC4600E5101E /* Agent.swift */,
 				27AB4EB31EC9EEEA00E5101E /* InvocationMapper.swift */,
 				27AB4EB51ECA039E00E5101E /* InvocationSerializer.swift */,
+				27ED22FD1EDCDE1B0082BA1D /* DataStorage.swift */,
 				27AB4EB71ECA049000E5101E /* MetricsController.swift */,
-				27AB4EBD1ECA06E900E5101E /* BatteryLevel.swift */,
-				27AB4EBF1ECA06E900E5101E /* DiskMetric.swift */,
-				27AB4EC01ECA06E900E5101E /* NetworkReachability.swift */,
-				27AB4EBA1ECA054500E5101E /* NativeRessources.c */,
-				27AB4EBB1ECA054500E5101E /* NativeRessources.h */,
 				27AB4EB91ECA054500E5101E /* AutomaticInvocationTracker-Bridging-Header.h */,
 				2747F8B81ECB40A6008186D3 /* SwizzledUIViewController.swift */,
 				27ED22F41ED251200082BA1D /* RemoteCall.swift */,
-				27ED22F81ED25C3C0082BA1D /* LocationHandler.swift */,
-				27ED22FA1ED25CF80082BA1D /* SSIDSniffer.swift */,
 			);
 			name = Agent;
 			sourceTree = "<group>";
@@ -194,6 +191,20 @@
 				27ED22F21ECF2E6F0082BA1D /* URLSessionInvocationInjection.swift */,
 			);
 			name = Swizzling;
+			sourceTree = "<group>";
+		};
+		27ED22FF1EDCE17A0082BA1D /* Metrics */ = {
+			isa = PBXGroup;
+			children = (
+				27AB4EBD1ECA06E900E5101E /* BatteryLevel.swift */,
+				27AB4EBF1ECA06E900E5101E /* DiskMetric.swift */,
+				27AB4EC01ECA06E900E5101E /* NetworkReachability.swift */,
+				27AB4EBA1ECA054500E5101E /* NativeRessources.c */,
+				27AB4EBB1ECA054500E5101E /* NativeRessources.h */,
+				27ED22F81ED25C3C0082BA1D /* LocationHandler.swift */,
+				27ED22FA1ED25CF80082BA1D /* SSIDSniffer.swift */,
+			);
+			name = Metrics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +352,7 @@
 				2747F8B91ECB40A6008186D3 /* SwizzledUIViewController.swift in Sources */,
 				27AB4EB61ECA039E00E5101E /* InvocationSerializer.swift in Sources */,
 				27AB4EAE1EC9DB3A00E5101E /* Invocation.swift in Sources */,
+				27ED22FE1EDCDE1B0082BA1D /* DataStorage.swift in Sources */,
 				27AB4EC31ECA06E900E5101E /* DiskMetric.swift in Sources */,
 				27AB4EB01EC9DBB500E5101E /* Util.swift in Sources */,
 				27AB4EC11ECA06E900E5101E /* BatteryLevel.swift in Sources */,

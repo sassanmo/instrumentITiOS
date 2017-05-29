@@ -10,14 +10,11 @@ import UIKit
 
 class MetricsController: NSObject {
     
-    var networkReachability : NetworkReachability!
     var nativeRessources : native_diagnostic_info_t
-    var networktypeList : [String]
-    var cpuList : [Float]
-    var memoryList : [Float]
-    var diskList : [Double]
-    var powerList : [Float]
+    
     var timestampList : [UInt64]
+    var measurementMapList : [[String : Any]]
+    
     var timer : Timer
     let bufferSize : Int = 1000
     var fireTimeIntervall : Float = 1
@@ -25,13 +22,8 @@ class MetricsController: NSObject {
     override init() {
         nativeRessources = native_diagnostic_info_t()
         timer = Timer()
-        networkReachability = NetworkReachability()
-        networktypeList = [String]()
-        cpuList = [Float]()
-        memoryList = [Float]()
-        diskList = [Double]()
-        powerList = [Float]()
         timestampList = [UInt64]()
+        measurementMapList = [[String : Any]]()
         super.init()
         self.reinitializeTimer()
     }
@@ -71,14 +63,14 @@ class MetricsController: NSObject {
     }
     
     func getDataInSpecificIntervall() {
-        self.collectMetrics()
-        self.timer = Timer.scheduledTimer(timeInterval: TimeInterval(self.fireTimeIntervall), target: self, selector: #selector(self.collectMetrics), userInfo: nil, repeats: true);
+        self.performMeasurements()
+        self.timer = Timer.scheduledTimer(timeInterval: TimeInterval(self.fireTimeIntervall), target: self, selector: #selector(self.performMeasurements), userInfo: nil, repeats: true);
     }
     
     func reinitializeTimer() {
         DispatchQueue.main.async(execute: {
             self.timer.invalidate()
-            self.timer = Timer.scheduledTimer(timeInterval: TimeInterval(self.fireTimeIntervall), target: self, selector: #selector(self.collectMetrics), userInfo: nil, repeats: true);
+            self.timer = Timer.scheduledTimer(timeInterval: TimeInterval(self.fireTimeIntervall), target: self, selector: #selector(self.performMeasurements), userInfo: nil, repeats: true);
         })
     }
     
@@ -86,30 +78,28 @@ class MetricsController: NSObject {
         self.timer.invalidate()
     }
     
-    @objc func collectMetrics() {
-        let cpupercentage = getCpuUsage()
-        let memory = getMemoryLoad()
-        let disk = DiskMetric.getUsedDiskPercentage()
-        let power = BatteryLevel.getBatteryLevel()
+    @objc func performMeasurements() {
         let timestamp = getTimestamp()
         
-        if (cpuList.count >= bufferSize) {
-            self.cpuList.remove(at: 0)
-            self.memoryList.remove(at: 0)
-            self.diskList.remove(at: 0)
-            self.powerList.remove(at: 0)
-            self.timestampList.remove(at: 0)
+        var measurementMap = [String : Any]()
+        measurementMap["storageUsage"] = DiskMetric.getUsedDiskPercentage()
+        measurementMap["batteryPower"] = BatteryLevel.getBatteryLevel()
+        measurementMap["timestamp"] = timestamp
+        measurementMap["type"] = "MobilePeriodicMeasurement"
+        measurementMap["cpuUsage"] = getCpuUsage()
+        measurementMap["memoryUsage"] = getMemoryLoad()
+        
+        if (measurementMapList.count >= bufferSize) {
+            measurementMapList.remove(at: 0)
+            timestampList.remove(at: 0)
         }
         
-        self.cpuList.append(cpupercentage)
-        self.memoryList.append(memory)
-        self.diskList.append(disk)
-        self.powerList.append(power)
-        self.timestampList.append(timestamp)
+        measurementMapList.append(measurementMap)
+        timestampList.append(timestamp)
         
-//        if NetworkReachability.getConnectionInformation().0 == "WLAN" {
-//            Agent.getInstance().spansDispatch()
-//        }
+        if NetworkReachability.getConnectionInformation().0 == "WLAN" {
+            Agent.getInstance().spansDispatch()
+        }
     }
 
 }
