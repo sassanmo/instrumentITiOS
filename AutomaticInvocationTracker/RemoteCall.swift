@@ -48,5 +48,37 @@ class RemoteCall: Invocation {
             self.duration = endtime - starttime
         }
     }
-
+    
+    override func getInvocationMap() -> [String : Any] {
+        var serializedInvocation: [String : Any] = [String : Any]()
+        var tags: [String : Any] = [String : Any]()
+        var spanContext: [String : Any] = [String : Any]()
+        serializedInvocation["operationName"] = "\(self.name) (\(self.url))"
+        serializedInvocation["startTimeMicros"] = self.startTime
+        serializedInvocation["duration"] = self.duration
+        tags["http.url"] = self.url
+        tags["http.request.networkConnection"] = self.startConnectivity
+        tags["http.request.latitude"] = self.startPosition?.latitude
+        tags["http.request.longitude"] = self.startPosition?.longitude
+        tags["http.request.ssid"] = self.startSSID
+        tags["http.request.networkProvider"] = self.startProvider
+        tags["http.request.responseCode"] = self.responseCode
+        tags["http.request.timeout"] = self.timeout
+        tags["http.response.networkConnection"] = self.endConnectivity
+        tags["http.response.latitude"] = self.endPosition?.latitude
+        tags["http.response.longitude"] = self.endPosition?.longitude
+        tags["http.response.ssid"] = self.endSSID
+        tags["http.response.networkProvider"] = self.endProvider
+        tags["http.response.timeout"] = self.timeout
+        tags["ext.propagation.type"] = "HTTP"
+        tags["span.kind"] = "client"
+        serializedInvocation["tags"] = tags
+        spanContext["id"] = self.id
+        spanContext["traceId"] = self.traceId
+        spanContext["parentId"] = self.parentId
+        serializedInvocation["spanContext"] = spanContext
+        return serializedInvocation
+        
+    }
+    
 }

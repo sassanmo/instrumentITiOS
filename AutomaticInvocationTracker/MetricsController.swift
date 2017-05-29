@@ -79,7 +79,6 @@ class MetricsController: NSObject {
         DispatchQueue.main.async(execute: {
             self.timer.invalidate()
             self.timer = Timer.scheduledTimer(timeInterval: TimeInterval(self.fireTimeIntervall), target: self, selector: #selector(self.collectMetrics), userInfo: nil, repeats: true);
-            
         })
     }
     

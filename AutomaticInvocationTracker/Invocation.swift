@@ -91,6 +91,23 @@ class Invocation: NSObject {
         return (threadId!, threadName)
     }
     
+    func getInvocationMap() -> [String : Any] {
+        var serializedInvocation: [String : Any] = [String : Any]()
+        var tags: [String : Any] = [String : Any]()
+        var spanContext: [String : Any] = [String : Any]()
+        serializedInvocation["operationName"] = self.name
+        serializedInvocation["startTimeMicros"] = self.startTime
+        serializedInvocation["duration"] = self.duration
+        tags["span.kind"] = "client"
+        tags["ext.propagation.type"] = "IOS"
+        serializedInvocation["tags"] = tags
+        spanContext["id"] = self.id
+        spanContext["traceId"] = self.traceId
+        spanContext["parentId"] = self.parentId
+        serializedInvocation["spanContext"] = spanContext
+        return serializedInvocation
+    }
+    
     override var description: String {
         return "\(holder).\(name)"
     }
