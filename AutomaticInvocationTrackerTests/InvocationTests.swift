@@ -1,15 +1,15 @@
 //
-//  AutomaticInvocationTrackerTests.swift
-//  AutomaticInvocationTrackerTests
+//  InvocationTests.swift
+//  AutomaticInvocationTracker
 //
-//  Created by Matteo Sassano on 15.05.17.
+//  Created by Matteo Sassano on 11.06.17.
 //  Copyright © 2017 Matteo Sassano. All rights reserved.
 //
 
 import XCTest
 @testable import AutomaticInvocationTracker
 
-class AutomaticInvocationTrackerTests: XCTestCase {
+class InvocationTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -24,6 +24,13 @@ class AutomaticInvocationTrackerTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+    
+    func testClosedInvoctaion() {
+        let invocationId = Agent.getInstance().trackInvocation()
+        let invocationObject = Agent.getInstance().invocationMapper.invocationMap?[invocationId]
+        Agent.getInstance().closeInvocation(id: invocationId)
+        assert(invocationObject?.duration == (invocationObject?.endTime)! - (invocationObject?.startTime)!)
     }
     
     func testPerformanceExample() {

@@ -62,6 +62,10 @@ class Agent: NSObject {
         }
     }
     
+    static func reinitAgent() {
+        Agent.agent = Agent()
+    }
+    
     func setAgentConfiguration(properties: [(String, Any)]? = nil) {
         if let properties = properties {
             for (property, value) in properties {
@@ -79,7 +83,7 @@ class Agent: NSObject {
     }
     
     func closeInvocation(id: UInt64) {
-        
+        invocationMapper.removeInvocation(id: id)
     }
     
     func trackRemoteCall(function: String = #function, file: String = #file, url: String) -> UInt64 {
@@ -110,9 +114,17 @@ class Agent: NSObject {
         remotecall.endProvider = NetworkReachability.getConnectionInformation().1
     }
     
-    func setRemoteCallAsChild(id: UInt64) {
-        if let remoteCall = invocationMapper.remotecallMap?[id] {
-            invocationMapper.childMap?[remoteCall.threadId] = remoteCall
+//    func setRemoteCallAsChild(id: UInt64) {
+//        if let remoteCall = invocationMapper.remotecallMap?[id] {
+//            invocationMapper.childMap?[remoteCall.threadId] = remoteCall
+//        }
+//    }
+    
+    func injectRemoteCallAsParent(parentid: UInt64, id: UInt64) {
+        if var remotecall = invocationMapper.remotecallMap?[parentid] {
+            if let invcation = invocationMapper.invocationMap?[id] {
+                invcation.setInvocationRelation(parent: &remotecall)
+            }
         }
     }
     
@@ -131,6 +143,9 @@ class Agent: NSObject {
     }
     
     func spansDispatch() {
+        if invocationMapper.closedTraces?.count != 0 {
+            invocationSerializer.getDataPackage()
+        }
         if invocationSerializer.serializedInvocations.count != 0 {
             var invocationBuffer = invocationSerializer.serializedInvocations
             invocationSerializer.serializedInvocations = [String]()

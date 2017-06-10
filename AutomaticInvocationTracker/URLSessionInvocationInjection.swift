@@ -37,8 +37,11 @@ extension URLSession {
         var mutableRequest: NSMutableURLRequest = (request as NSURLRequest).mutableCopy() as! NSMutableURLRequest
         agent.injectHeaderAttributes(id: remotecallId, request: &mutableRequest)
         let dataTask = injectedDataTask(request: mutableRequest as URLRequest, completionHandler: {data, response, error -> Void in
-            agent.setRemoteCallAsChild(id: remotecallId)
+            //agent.setRemoteCallAsChild(id: remotecallId)
+            let invocationId = Agent.getInstance().trackInvocation()
+            Agent.getInstance().injectRemoteCallAsParent(parentid: remotecallId, id: invocationId)
             completionHandler(data, response, error)
+            Agent.getInstance().closeInvocation(id: invocationId)
             agent.closeRemoteCall(id: remotecallId, response: response, error: error)
             print("close request")
         })

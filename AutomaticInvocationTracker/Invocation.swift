@@ -69,12 +69,18 @@ class Invocation: NSObject {
         }
     }
     
-    /// returns: updated parent
     func setInvocationRelation(parent: inout Invocation) {
         parent.childrenIds?.append(self.id)
         self.parentId = parent.id
         self.traceId = parent.traceId
     }
+    
+    func setInvocationRelation(parent: inout RemoteCall) {
+        parent.childrenIds?.append(self.id)
+        self.parentId = parent.id
+        self.traceId = parent.traceId
+    }
+    
     
     func setInvocationAsRoot() {
         self.traceId = self.id
