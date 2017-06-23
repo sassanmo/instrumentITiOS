@@ -10,20 +10,19 @@ import UIKit
 
 class RestManager: NSObject {
     
-    func httpPostRequest(path: String, body : String, completion: @escaping (Bool)->()) -> Void {
-        print("Starting post request")
+    /// NSMutableURLRequest for a HTTP POST request.
+    /// Completion handler with argument 'true' tells the closure that an error occured, otherwise not
+    /// - parameters:
+    ///     - path: Url path of the back end
+    ///     - body: HTTP body
+    ///     - completion: function callback
+    func httpPostRequest(path: String, body : String, completion: @escaping (Bool) -> ()) -> Void {
         let request = NSMutableURLRequest(url: URL(string: path)!)
-        
-        // Set the method to POST
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        // Set the POST body for the request
         let validatedJSON = validateJSON(json:body);
         if (validatedJSON != Constants.INVALID) {
-            
             request.httpBody = validatedJSON;
-            print("Request was successfully setup")
             performRequest(request: request, completion: completion);
         } else {
             print("JSON data is invalid, post Request aborted!");
@@ -31,6 +30,11 @@ class RestManager: NSObject {
         }
     }
     
+    /// Performs the HTTP request with the pre set up NSMutableURLRequest.
+    /// Completion handler with argument 'true' tells the closure that an error occured, otherwise not
+    /// - parameters:
+    ///     - request: Pre configured NSMutableURLRequest
+    ///     - completion: function callback
     private func performRequest (request : NSMutableURLRequest, completion: @escaping (Bool)->()) -> Void {
         let config = URLSessionConfiguration.default
         config.timeoutIntervalForRequest = request.timeoutInterval
@@ -73,6 +77,11 @@ class RestManager: NSObject {
         task.resume()
     }
     
+    /// Checks whether the string object is a valid JSON object
+    /// Converts the string object to a data object if valid
+    /// - parameters:
+    ///     - json: string object to be checked and converted
+    /// - returns: Converted data object
     private func validateJSON(json: String) -> Data {
         do {
             let jsonData = try JSONSerialization.jsonObject(with: json.data(using: .utf8)!)

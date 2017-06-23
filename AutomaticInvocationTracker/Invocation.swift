@@ -68,7 +68,7 @@ class Invocation: NSObject {
             self.duration = endtime - starttime
         }
     }
-    
+
     func setInvocationRelation(parent: inout Invocation) {
         parent.childrenIds?.append(self.id)
         self.parentId = parent.id

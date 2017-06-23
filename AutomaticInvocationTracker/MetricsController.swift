@@ -79,6 +79,10 @@ class MetricsController: NSObject {
     }
     
     @objc func performMeasurements() {
+        if (Agent.getInstance().optOut) {
+            self.timer.invalidate()
+        }
+        
         let timestamp = getTimestamp()
         
         var measurementMap = [String : Any]()

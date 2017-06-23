@@ -4,6 +4,7 @@ import UIKit
 class DataStorage: NSObject {
     
     let storagePath = "storage"
+    let optOutPath = "optOut"
     let agentIdStorage = "agentIDStorage"
     let hostStorage = "hostStorage"
     let monitorStorage = "monitorStorage"

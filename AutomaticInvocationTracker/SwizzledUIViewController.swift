@@ -16,7 +16,13 @@ private let swizzling: (UIViewController.Type) -> () = { viewController in
     let originalMethod = class_getInstanceMethod(viewController, originalSelector)
     let swizzledMethod = class_getInstanceMethod(viewController, swizzledSelector)
     
-    method_exchangeImplementations(originalMethod, swizzledMethod) }
+    method_exchangeImplementations(originalMethod, swizzledMethod)
+
+
+    let originalSelectorMemory = #selector(viewController.didReceiveMemoryWarning)
+    let swizzledSelectorMemory = #selector(viewController.myDidReceiveMemoryWarning)
+
+}
 
 extension UIViewController {
     
@@ -28,15 +34,24 @@ extension UIViewController {
     
     // MARK: - Method Swizzling
     
+    
+    
+    
     func myViewWillAppear(animated: Bool) {
         // The agent starts tracking the viewWillAppear function
-        // let invocationId = Agent().trackInvocation()
+        let invocationId = Agent.getInstance().trackInvocation()
         
-        // Executes the actual viewWillAppear function
-        self.myViewWillAppear(animated: animated)
+        // Do something
         
         // The agent stops tracking the viewWillAppear function
-        // Agent().closeInvocation(id: invocationId)
+        Agent.getInstance().closeInvocation(id: invocationId)
+    }
+    
+    func myDidReceiveMemoryWarning() {
+        print("swizzled even this")
+        myDidReceiveMemoryWarning()
     }
     
 }
+
+

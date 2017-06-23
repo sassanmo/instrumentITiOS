@@ -30,6 +30,8 @@ class Agent: NSObject {
     
     var restManager: RestManager
     
+    var optOut: Bool = false
+    
     init(properties: [(String, Any)]? = nil) {
         agentProperties = [String: Any]()
         invocationMapper = InvocationMapper()
@@ -77,26 +79,38 @@ class Agent: NSObject {
     }
     
     func trackInvocation(function: String = #function, file: String = #file) -> UInt64 {
-        let invocation = Invocation(name: function, holder: file)
-        invocationMapper.addInvocation(invocation: invocation)
-        return invocation.id
+        if (self.optOut == false) {
+            let invocation = Invocation(name: function, holder: file)
+            invocationMapper.addInvocation(invocation: invocation)
+            return invocation.id
+        } else {
+            return 0
+        }
     }
     
     func closeInvocation(id: UInt64) {
-        invocationMapper.removeInvocation(id: id)
+        if (self.optOut == false) {
+            invocationMapper.removeInvocation(id: id)
+        }
     }
     
     func trackRemoteCall(function: String = #function, file: String = #file, url: String) -> UInt64 {
-        let remotecall = RemoteCall(name: function, holder: file, url: url)
-        invocationMapper.mapRemoteCall(remoteCall: remotecall)
-        return remotecall.id
+        if (self.optOut == false) {
+            let remotecall = RemoteCall(name: function, holder: file, url: url)
+            invocationMapper.mapRemoteCall(remoteCall: remotecall)
+            return remotecall.id
+        } else {
+            return 0
+        }
     }
     
     func closeRemoteCall(id: UInt64, response: URLResponse?, error: Error?) {
-        if var remotecall = invocationMapper.remotecallMap?[id] {
-            invocationMapper.remotecallMap?[id] = nil
-            setRemoteCallEndProperties(remotecall: &remotecall)
-            remotecall.closeRemoteCall(response: response, error: error)
+        if (self.optOut == false) {
+            if var remotecall = invocationMapper.remotecallMap?[id] {
+                invocationMapper.remotecallMap?[id] = nil
+                setRemoteCallEndProperties(remotecall: &remotecall)
+                remotecall.closeRemoteCall(response: response, error: error)
+            }
         }
     }
     
@@ -134,11 +148,13 @@ class Agent: NSObject {
     }
     
     func injectHeaderAttributes(id: UInt64, request: inout NSMutableURLRequest) {
-        if let lastInvocation = invocationMapper.remotecallMap?[id] {
-            let spanid = lastInvocation.id
-            let traceId = lastInvocation.traceId
-            request.addValue(decimalToHex(decimal: spanid), forHTTPHeaderField: "x-inspectit-spanid")
-            request.addValue(decimalToHex(decimal: traceId!), forHTTPHeaderField: "x-inspectit-traceid")
+        if (self.optOut == false) {
+            if let lastInvocation = invocationMapper.remotecallMap?[id] {
+                let spanid = lastInvocation.id
+                let traceId = lastInvocation.traceId
+                request.addValue(decimalToHex(decimal: spanid), forHTTPHeaderField: "x-inspectit-spanid")
+                request.addValue(decimalToHex(decimal: traceId!), forHTTPHeaderField: "x-inspectit-traceid")
+            }
         }
     }
     
@@ -147,10 +163,11 @@ class Agent: NSObject {
             invocationSerializer.getDataPackage()
         }
         if invocationSerializer.serializedInvocations.count != 0 {
+            /*
             var invocationBuffer = invocationSerializer.serializedInvocations
             invocationSerializer.serializedInvocations = [String]()
             for (index, item) in invocationBuffer.enumerated() {
-                restManager.httpPostRequest(path: Constants.HOST, body: item, completion: {error -> Void in
+                restManager.httpPostRequest(path: Constants.HOST, body: item, completion: { error -> Void in
                     if error {
                         self.invocationSerializer.serializedInvocations.append(item)
                     } else {
@@ -158,6 +175,7 @@ class Agent: NSObject {
                     }
                 })
             }
+             */
         }
     }
     

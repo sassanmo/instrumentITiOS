@@ -27,7 +27,6 @@
 		27AB4EC11ECA06E900E5101E /* BatteryLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EBD1ECA06E900E5101E /* BatteryLevel.swift */; };
 		27AB4EC31ECA06E900E5101E /* DiskMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EBF1ECA06E900E5101E /* DiskMetric.swift */; };
 		27AB4EC41ECA06E900E5101E /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EC01ECA06E900E5101E /* NetworkReachability.swift */; };
-		27D0AB101EE121680061D35C /* Foo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D0AB0F1EE121680061D35C /* Foo.swift */; };
 		27D0AB121EECB8040061D35C /* InvocationSerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D0AB111EECB8040061D35C /* InvocationSerializerTests.swift */; };
 		27D0AB141EECBDA40061D35C /* InvocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D0AB131EECBDA40061D35C /* InvocationTests.swift */; };
 		27ED22F31ECF2E6F0082BA1D /* URLSessionInvocationInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22F21ECF2E6F0082BA1D /* URLSessionInvocationInjection.swift */; };
@@ -85,7 +84,6 @@
 		27AB4EBD1ECA06E900E5101E /* BatteryLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryLevel.swift; sourceTree = "<group>"; };
 		27AB4EBF1ECA06E900E5101E /* DiskMetric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskMetric.swift; sourceTree = "<group>"; };
 		27AB4EC01ECA06E900E5101E /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
-		27D0AB0F1EE121680061D35C /* Foo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Foo.swift; sourceTree = "<group>"; };
 		27D0AB111EECB8040061D35C /* InvocationSerializerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvocationSerializerTests.swift; sourceTree = "<group>"; };
 		27D0AB131EECBDA40061D35C /* InvocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvocationTests.swift; sourceTree = "<group>"; };
 		27ED22F21ECF2E6F0082BA1D /* URLSessionInvocationInjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionInvocationInjection.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 				27AB4E871EC9DB1900E5101E /* LaunchScreen.storyboard */,
 				27AB4E8A1EC9DB1900E5101E /* Info.plist */,
 				27AB4E821EC9DB1900E5101E /* AutomaticInvocationTracker.xcdatamodeld */,
-				27D0AB0F1EE121680061D35C /* Foo.swift */,
 			);
 			path = AutomaticInvocationTracker;
 			sourceTree = "<group>";
@@ -378,7 +375,6 @@
 				27AB4EC41ECA06E900E5101E /* NetworkReachability.swift in Sources */,
 				27AB4EB41EC9EEEA00E5101E /* InvocationMapper.swift in Sources */,
 				2747F92C1ECF07C6008186D3 /* NSURLRequestTraceInjection.swift in Sources */,
-				27D0AB101EE121680061D35C /* Foo.swift in Sources */,
 				27AB4E7E1EC9DB1900E5101E /* ViewController.swift in Sources */,
 				27AB4EBC1ECA054500E5101E /* NativeRessources.c in Sources */,
 				27AB4E7C1EC9DB1900E5101E /* AppDelegate.swift in Sources */,
