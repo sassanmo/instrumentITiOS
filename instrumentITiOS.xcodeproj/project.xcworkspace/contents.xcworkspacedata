@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/matteosassano/Desktop/AutomaticInvocationTracker/instrumentITiOS.xcodeproj">
+      location = "self:/Users/matteosassano/Desktop/instrumentITiOS/instrumentITiOS.xcodeproj">
    </FileRef>
 </Workspace>

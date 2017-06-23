@@ -12,11 +12,11 @@
 		27AB4E7C1EC9DB1900E5101E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4E7B1EC9DB1900E5101E /* AppDelegate.swift */; };
 		27AB4E7E1EC9DB1900E5101E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4E7D1EC9DB1900E5101E /* ViewController.swift */; };
 		27AB4E811EC9DB1900E5101E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27AB4E7F1EC9DB1900E5101E /* Main.storyboard */; };
-		27AB4E841EC9DB1900E5101E /* AutomaticInvocationTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4E821EC9DB1900E5101E /* AutomaticInvocationTracker.xcdatamodeld */; };
+		27AB4E841EC9DB1900E5101E /* instrumentITiOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4E821EC9DB1900E5101E /* instrumentITiOS.xcdatamodeld */; };
 		27AB4E861EC9DB1900E5101E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27AB4E851EC9DB1900E5101E /* Assets.xcassets */; };
 		27AB4E891EC9DB1900E5101E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27AB4E871EC9DB1900E5101E /* LaunchScreen.storyboard */; };
 		27AB4E941EC9DB1900E5101E /* InvocationMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4E931EC9DB1900E5101E /* InvocationMappingTests.swift */; };
-		27AB4E9F1EC9DB1900E5101E /* AutomaticInvocationTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4E9E1EC9DB1900E5101E /* AutomaticInvocationTrackerUITests.swift */; };
+		27AB4E9F1EC9DB1900E5101E /* instrumentITiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4E9E1EC9DB1900E5101E /* instrumentITiOSUITests.swift */; };
 		27AB4EAE1EC9DB3A00E5101E /* IITMInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EAD1EC9DB3A00E5101E /* IITMInvocation.swift */; };
 		27AB4EB01EC9DBB500E5101E /* IITMUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EAF1EC9DBB500E5101E /* IITMUtil.swift */; };
 		27AB4EB21EC9DC4600E5101E /* IITMAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EB11EC9DC4600E5101E /* IITMAgent.swift */; };
@@ -44,14 +44,14 @@
 			containerPortal = 27AB4E701EC9DB1900E5101E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 27AB4E771EC9DB1900E5101E;
-			remoteInfo = AutomaticInvocationTracker;
+			remoteInfo = instrumentITiOS;
 		};
 		27AB4E9B1EC9DB1900E5101E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 27AB4E701EC9DB1900E5101E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 27AB4E771EC9DB1900E5101E;
-			remoteInfo = AutomaticInvocationTracker;
+			remoteInfo = instrumentITiOS;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -62,7 +62,7 @@
 		27AB4E7B1EC9DB1900E5101E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27AB4E7D1EC9DB1900E5101E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27AB4E801EC9DB1900E5101E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		27AB4E831EC9DB1900E5101E /* AutomaticInvocationTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AutomaticInvocationTracker.xcdatamodel; sourceTree = "<group>"; };
+		27AB4E831EC9DB1900E5101E /* instrumentITiOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = instrumentITiOS.xcdatamodel; sourceTree = "<group>"; };
 		27AB4E851EC9DB1900E5101E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27AB4E881EC9DB1900E5101E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27AB4E8A1EC9DB1900E5101E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		27AB4E931EC9DB1900E5101E /* InvocationMappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvocationMappingTests.swift; sourceTree = "<group>"; };
 		27AB4E951EC9DB1900E5101E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27AB4E9A1EC9DB1900E5101E /* instrumentITiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instrumentITiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		27AB4E9E1EC9DB1900E5101E /* AutomaticInvocationTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaticInvocationTrackerUITests.swift; sourceTree = "<group>"; };
+		27AB4E9E1EC9DB1900E5101E /* instrumentITiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instrumentITiOSUITests.swift; sourceTree = "<group>"; };
 		27AB4EA01EC9DB1900E5101E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27AB4EAD1EC9DB3A00E5101E /* IITMInvocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMInvocation.swift; sourceTree = "<group>"; };
 		27AB4EAF1EC9DBB500E5101E /* IITMUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMUtil.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		27AB4EB31EC9EEEA00E5101E /* IITMInvocationMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMInvocationMapper.swift; sourceTree = "<group>"; };
 		27AB4EB51ECA039E00E5101E /* IITMInvocationSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMInvocationSerializer.swift; sourceTree = "<group>"; };
 		27AB4EB71ECA049000E5101E /* IITMMetricsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMMetricsController.swift; sourceTree = "<group>"; };
-		27AB4EB91ECA054500E5101E /* AutomaticInvocationTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AutomaticInvocationTracker-Bridging-Header.h"; sourceTree = "<group>"; };
+		27AB4EB91ECA054500E5101E /* IITMinstrumentITiOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IITMinstrumentITiOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		27AB4EBA1ECA054500E5101E /* NativeRessources.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NativeRessources.c; sourceTree = "<group>"; };
 		27AB4EBB1ECA054500E5101E /* NativeRessources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeRessources.h; sourceTree = "<group>"; };
 		27AB4EBD1ECA06E900E5101E /* BatteryLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryLevel.swift; sourceTree = "<group>"; };
@@ -124,8 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				27AB4E7A1EC9DB1900E5101E /* instrumentITiOS */,
-				27AB4E921EC9DB1900E5101E /* AutomaticInvocationTrackerTests */,
-				27AB4E9D1EC9DB1900E5101E /* AutomaticInvocationTrackerUITests */,
+				27AB4E921EC9DB1900E5101E /* instrumentITiOSTests */,
+				27AB4E9D1EC9DB1900E5101E /* instrumentITiOSUITests */,
 				27AB4E791EC9DB1900E5101E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -151,13 +151,13 @@
 				27AB4E851EC9DB1900E5101E /* Assets.xcassets */,
 				27AB4E871EC9DB1900E5101E /* LaunchScreen.storyboard */,
 				27AB4E8A1EC9DB1900E5101E /* Info.plist */,
-				27AB4E821EC9DB1900E5101E /* AutomaticInvocationTracker.xcdatamodeld */,
+				27AB4E821EC9DB1900E5101E /* instrumentITiOS.xcdatamodeld */,
 			);
 			name = instrumentITiOS;
-			path = AutomaticInvocationTracker;
+			path = instrumentITiOS;
 			sourceTree = "<group>";
 		};
-		27AB4E921EC9DB1900E5101E /* AutomaticInvocationTrackerTests */ = {
+		27AB4E921EC9DB1900E5101E /* instrumentITiOSTests */ = {
 			isa = PBXGroup;
 			children = (
 				27AB4E951EC9DB1900E5101E /* Info.plist */,
@@ -165,16 +165,16 @@
 				27D0AB111EECB8040061D35C /* InvocationSerializerTests.swift */,
 				27D0AB131EECBDA40061D35C /* InvocationTests.swift */,
 			);
-			path = AutomaticInvocationTrackerTests;
+			path = instrumentITiOSTests;
 			sourceTree = "<group>";
 		};
-		27AB4E9D1EC9DB1900E5101E /* AutomaticInvocationTrackerUITests */ = {
+		27AB4E9D1EC9DB1900E5101E /* instrumentITiOSUITests */ = {
 			isa = PBXGroup;
 			children = (
-				27AB4E9E1EC9DB1900E5101E /* AutomaticInvocationTrackerUITests.swift */,
+				27AB4E9E1EC9DB1900E5101E /* instrumentITiOSUITests.swift */,
 				27AB4EA01EC9DB1900E5101E /* Info.plist */,
 			);
-			path = AutomaticInvocationTrackerUITests;
+			path = instrumentITiOSUITests;
 			sourceTree = "<group>";
 		};
 		27AB4EAC1EC9DB2700E5101E /* Agent */ = {
@@ -188,7 +188,7 @@
 				27AB4EB51ECA039E00E5101E /* IITMInvocationSerializer.swift */,
 				27ED22FD1EDCDE1B0082BA1D /* IITMDataStorage.swift */,
 				27AB4EB71ECA049000E5101E /* IITMMetricsController.swift */,
-				27AB4EB91ECA054500E5101E /* AutomaticInvocationTracker-Bridging-Header.h */,
+				27AB4EB91ECA054500E5101E /* ITTMinstrumentITiOS-Bridging-Header.h */,
 				27ED22F41ED251200082BA1D /* IITMRemoteCall.swift */,
 				27ED23001EDCE2930082BA1D /* IITMConstants.swift */,
 				27ED23021EDCE8220082BA1D /* IITMRestManager.swift */,
@@ -236,7 +236,7 @@
 			dependencies = (
 			);
 			name = instrumentITiOS;
-			productName = AutomaticInvocationTracker;
+			productName = instrumentITiOS;
 			productReference = 27AB4E781EC9DB1900E5101E /* instrumentITiOS.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -254,7 +254,7 @@
 				27AB4E911EC9DB1900E5101E /* PBXTargetDependency */,
 			);
 			name = instrumentITiOSTests;
-			productName = AutomaticInvocationTrackerTests;
+			productName = instrumentITiOSTests;
 			productReference = 27AB4E8F1EC9DB1900E5101E /* instrumentITiOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -272,7 +272,7 @@
 				27AB4E9C1EC9DB1900E5101E /* PBXTargetDependency */,
 			);
 			name = instrumentITiOSUITests;
-			productName = AutomaticInvocationTrackerUITests;
+			productName = instrumentITiOSUITests;
 			productReference = 27AB4E9A1EC9DB1900E5101E /* instrumentITiOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
@@ -360,7 +360,7 @@
 			files = (
 				27AB4EB81ECA049000E5101E /* IITMMetricsController.swift in Sources */,
 				27ED23031EDCE8220082BA1D /* IITMRestManager.swift in Sources */,
-				27AB4E841EC9DB1900E5101E /* AutomaticInvocationTracker.xcdatamodeld in Sources */,
+				27AB4E841EC9DB1900E5101E /* instrumentITiOS.xcdatamodeld in Sources */,
 				27ED22F31ECF2E6F0082BA1D /* IITMURLSessionInvocationInjection.swift in Sources */,
 				27ED22F91ED25C3C0082BA1D /* LocationHandler.swift in Sources */,
 				2747F8B91ECB40A6008186D3 /* IITMSwizzledUIViewController.swift in Sources */,
@@ -397,7 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27AB4E9F1EC9DB1900E5101E /* AutomaticInvocationTrackerUITests.swift in Sources */,
+				27AB4E9F1EC9DB1900E5101E /* instrumentITiOSUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,11 +533,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8PYY9ZFVYZ;
-				INFOPLIST_FILE = AutomaticInvocationTracker/Info.plist;
+				INFOPLIST_FILE = instrumentITiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matteosassano.instrumentITiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AutomaticInvocationTracker/AutomaticInvocationTracker-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "instrumentITiOS/IITMinstrumentITiOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -549,11 +549,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8PYY9ZFVYZ;
-				INFOPLIST_FILE = AutomaticInvocationTracker/Info.plist;
+				INFOPLIST_FILE = instrumentITiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matteosassano.instrumentITiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AutomaticInvocationTracker/AutomaticInvocationTracker-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "instrumentITiOS/IITMinstrumentITiOS-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -564,9 +564,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 8PYY9ZFVYZ;
-				INFOPLIST_FILE = AutomaticInvocationTrackerTests/Info.plist;
+				INFOPLIST_FILE = instrumentITiOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.matteosassano.AutomaticInvocationTrackerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matteosassano.instrumentITiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/instrumentITiOS.app/instrumentITiOS";
@@ -579,9 +579,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 8PYY9ZFVYZ;
-				INFOPLIST_FILE = AutomaticInvocationTrackerTests/Info.plist;
+				INFOPLIST_FILE = instrumentITiOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.matteosassano.AutomaticInvocationTrackerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matteosassano.instrumentITiOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/instrumentITiOS.app/instrumentITiOS";
@@ -593,12 +593,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8PYY9ZFVYZ;
-				INFOPLIST_FILE = AutomaticInvocationTrackerUITests/Info.plist;
+				INFOPLIST_FILE = instrumentITiOSUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.matteosassano.AutomaticInvocationTrackerUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matteosassano.AinstrumentITiOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = AutomaticInvocationTracker;
+				TEST_TARGET_NAME = instrumentITiOS;
 			};
 			name = Debug;
 		};
@@ -607,12 +607,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8PYY9ZFVYZ;
-				INFOPLIST_FILE = AutomaticInvocationTrackerUITests/Info.plist;
+				INFOPLIST_FILE = instrumentITiOSUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.matteosassano.AutomaticInvocationTrackerUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matteosassano.instrumentITiOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = AutomaticInvocationTracker;
+				TEST_TARGET_NAME = instrumentITiOS;
 			};
 			name = Release;
 		};
@@ -658,13 +658,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		27AB4E821EC9DB1900E5101E /* AutomaticInvocationTracker.xcdatamodeld */ = {
+		27AB4E821EC9DB1900E5101E /* IITMinstrumentITiOS.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				27AB4E831EC9DB1900E5101E /* AutomaticInvocationTracker.xcdatamodel */,
+				27AB4E831EC9DB1900E5101E /* IITMinstrumentITiOS.xcdatamodel */,
 			);
-			currentVersion = 27AB4E831EC9DB1900E5101E /* AutomaticInvocationTracker.xcdatamodel */;
-			path = AutomaticInvocationTracker.xcdatamodeld;
+			currentVersion = 27AB4E831EC9DB1900E5101E /* IITMinstrumentITiOS.xcdatamodel */;
+			path = ITTMinstrumentITiOS.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
