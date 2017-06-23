@@ -6,7 +6,7 @@
 //  Copyright © 2017 Matteo Sassano. All rights reserved.
 //
 
-#include "NativeRessources.h"
+#include "IITMNativeRessources.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -12,7 +12,7 @@
 		27AB4E7C1EC9DB1900E5101E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4E7B1EC9DB1900E5101E /* AppDelegate.swift */; };
 		27AB4E7E1EC9DB1900E5101E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4E7D1EC9DB1900E5101E /* ViewController.swift */; };
 		27AB4E811EC9DB1900E5101E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27AB4E7F1EC9DB1900E5101E /* Main.storyboard */; };
-		27AB4E841EC9DB1900E5101E /* instrumentITiOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4E821EC9DB1900E5101E /* instrumentITiOS.xcdatamodeld */; };
+		27AB4E841EC9DB1900E5101E /* ITTMinstrumentITiOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4E821EC9DB1900E5101E /* ITTMinstrumentITiOS.xcdatamodeld */; };
 		27AB4E861EC9DB1900E5101E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27AB4E851EC9DB1900E5101E /* Assets.xcassets */; };
 		27AB4E891EC9DB1900E5101E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27AB4E871EC9DB1900E5101E /* LaunchScreen.storyboard */; };
 		27AB4E941EC9DB1900E5101E /* InvocationMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4E931EC9DB1900E5101E /* InvocationMappingTests.swift */; };
@@ -23,16 +23,16 @@
 		27AB4EB41EC9EEEA00E5101E /* IITMInvocationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EB31EC9EEEA00E5101E /* IITMInvocationMapper.swift */; };
 		27AB4EB61ECA039E00E5101E /* IITMInvocationSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EB51ECA039E00E5101E /* IITMInvocationSerializer.swift */; };
 		27AB4EB81ECA049000E5101E /* IITMMetricsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EB71ECA049000E5101E /* IITMMetricsController.swift */; };
-		27AB4EBC1ECA054500E5101E /* NativeRessources.c in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EBA1ECA054500E5101E /* NativeRessources.c */; };
-		27AB4EC11ECA06E900E5101E /* BatteryLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EBD1ECA06E900E5101E /* BatteryLevel.swift */; };
-		27AB4EC31ECA06E900E5101E /* DiskMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EBF1ECA06E900E5101E /* DiskMetric.swift */; };
-		27AB4EC41ECA06E900E5101E /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EC01ECA06E900E5101E /* NetworkReachability.swift */; };
+		27AB4EBC1ECA054500E5101E /* IITMNativeRessources.c in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EBA1ECA054500E5101E /* IITMNativeRessources.c */; };
+		27AB4EC11ECA06E900E5101E /* IITMBatteryLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EBD1ECA06E900E5101E /* IITMBatteryLevel.swift */; };
+		27AB4EC31ECA06E900E5101E /* IITMDiskMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EBF1ECA06E900E5101E /* IITMDiskMetric.swift */; };
+		27AB4EC41ECA06E900E5101E /* IITMNetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EC01ECA06E900E5101E /* IITMNetworkReachability.swift */; };
 		27D0AB121EECB8040061D35C /* InvocationSerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D0AB111EECB8040061D35C /* InvocationSerializerTests.swift */; };
 		27D0AB141EECBDA40061D35C /* InvocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D0AB131EECBDA40061D35C /* InvocationTests.swift */; };
 		27ED22F31ECF2E6F0082BA1D /* IITMURLSessionInvocationInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22F21ECF2E6F0082BA1D /* IITMURLSessionInvocationInjection.swift */; };
 		27ED22F51ED251200082BA1D /* IITMRemoteCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22F41ED251200082BA1D /* IITMRemoteCall.swift */; };
-		27ED22F91ED25C3C0082BA1D /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22F81ED25C3C0082BA1D /* LocationHandler.swift */; };
-		27ED22FB1ED25CF80082BA1D /* SSIDSniffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22FA1ED25CF80082BA1D /* SSIDSniffer.swift */; };
+		27ED22F91ED25C3C0082BA1D /* IITMLocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22F81ED25C3C0082BA1D /* IITMLocationHandler.swift */; };
+		27ED22FB1ED25CF80082BA1D /* IITMSSIDSniffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22FA1ED25CF80082BA1D /* IITMSSIDSniffer.swift */; };
 		27ED22FE1EDCDE1B0082BA1D /* IITMDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22FD1EDCDE1B0082BA1D /* IITMDataStorage.swift */; };
 		27ED23011EDCE2930082BA1D /* IITMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED23001EDCE2930082BA1D /* IITMConstants.swift */; };
 		27ED23031EDCE8220082BA1D /* IITMRestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED23021EDCE8220082BA1D /* IITMRestManager.swift */; };
@@ -79,17 +79,17 @@
 		27AB4EB51ECA039E00E5101E /* IITMInvocationSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMInvocationSerializer.swift; sourceTree = "<group>"; };
 		27AB4EB71ECA049000E5101E /* IITMMetricsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMMetricsController.swift; sourceTree = "<group>"; };
 		27AB4EB91ECA054500E5101E /* IITMinstrumentITiOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IITMinstrumentITiOS-Bridging-Header.h"; sourceTree = "<group>"; };
-		27AB4EBA1ECA054500E5101E /* NativeRessources.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NativeRessources.c; sourceTree = "<group>"; };
-		27AB4EBB1ECA054500E5101E /* NativeRessources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeRessources.h; sourceTree = "<group>"; };
-		27AB4EBD1ECA06E900E5101E /* BatteryLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BatteryLevel.swift; sourceTree = "<group>"; };
-		27AB4EBF1ECA06E900E5101E /* DiskMetric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiskMetric.swift; sourceTree = "<group>"; };
-		27AB4EC01ECA06E900E5101E /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		27AB4EBA1ECA054500E5101E /* IITMNativeRessources.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IITMNativeRessources.c; sourceTree = "<group>"; };
+		27AB4EBB1ECA054500E5101E /* IITMNativeRessources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IITMNativeRessources.h; sourceTree = "<group>"; };
+		27AB4EBD1ECA06E900E5101E /* IITMBatteryLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMBatteryLevel.swift; sourceTree = "<group>"; };
+		27AB4EBF1ECA06E900E5101E /* IITMDiskMetric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMDiskMetric.swift; sourceTree = "<group>"; };
+		27AB4EC01ECA06E900E5101E /* IITMNetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMNetworkReachability.swift; sourceTree = "<group>"; };
 		27D0AB111EECB8040061D35C /* InvocationSerializerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvocationSerializerTests.swift; sourceTree = "<group>"; };
 		27D0AB131EECBDA40061D35C /* InvocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvocationTests.swift; sourceTree = "<group>"; };
 		27ED22F21ECF2E6F0082BA1D /* IITMURLSessionInvocationInjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMURLSessionInvocationInjection.swift; sourceTree = "<group>"; };
 		27ED22F41ED251200082BA1D /* IITMRemoteCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMRemoteCall.swift; sourceTree = "<group>"; };
-		27ED22F81ED25C3C0082BA1D /* LocationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
-		27ED22FA1ED25CF80082BA1D /* SSIDSniffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSIDSniffer.swift; sourceTree = "<group>"; };
+		27ED22F81ED25C3C0082BA1D /* IITMLocationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMLocationHandler.swift; sourceTree = "<group>"; };
+		27ED22FA1ED25CF80082BA1D /* IITMSSIDSniffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMSSIDSniffer.swift; sourceTree = "<group>"; };
 		27ED22FD1EDCDE1B0082BA1D /* IITMDataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMDataStorage.swift; sourceTree = "<group>"; };
 		27ED23001EDCE2930082BA1D /* IITMConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMConstants.swift; sourceTree = "<group>"; };
 		27ED23021EDCE8220082BA1D /* IITMRestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMRestManager.swift; sourceTree = "<group>"; };
@@ -151,9 +151,8 @@
 				27AB4E851EC9DB1900E5101E /* Assets.xcassets */,
 				27AB4E871EC9DB1900E5101E /* LaunchScreen.storyboard */,
 				27AB4E8A1EC9DB1900E5101E /* Info.plist */,
-				27AB4E821EC9DB1900E5101E /* instrumentITiOS.xcdatamodeld */,
+				27AB4E821EC9DB1900E5101E /* ITTMinstrumentITiOS.xcdatamodeld */,
 			);
-			name = instrumentITiOS;
 			path = instrumentITiOS;
 			sourceTree = "<group>";
 		};
@@ -188,7 +187,7 @@
 				27AB4EB51ECA039E00E5101E /* IITMInvocationSerializer.swift */,
 				27ED22FD1EDCDE1B0082BA1D /* IITMDataStorage.swift */,
 				27AB4EB71ECA049000E5101E /* IITMMetricsController.swift */,
-				27AB4EB91ECA054500E5101E /* ITTMinstrumentITiOS-Bridging-Header.h */,
+				27AB4EB91ECA054500E5101E /* IITMinstrumentITiOS-Bridging-Header.h */,
 				27ED22F41ED251200082BA1D /* IITMRemoteCall.swift */,
 				27ED23001EDCE2930082BA1D /* IITMConstants.swift */,
 				27ED23021EDCE8220082BA1D /* IITMRestManager.swift */,
@@ -209,13 +208,13 @@
 		27ED22FF1EDCE17A0082BA1D /* Metrics */ = {
 			isa = PBXGroup;
 			children = (
-				27AB4EBD1ECA06E900E5101E /* BatteryLevel.swift */,
-				27AB4EBF1ECA06E900E5101E /* DiskMetric.swift */,
-				27AB4EC01ECA06E900E5101E /* NetworkReachability.swift */,
-				27AB4EBA1ECA054500E5101E /* NativeRessources.c */,
-				27AB4EBB1ECA054500E5101E /* NativeRessources.h */,
-				27ED22F81ED25C3C0082BA1D /* LocationHandler.swift */,
-				27ED22FA1ED25CF80082BA1D /* SSIDSniffer.swift */,
+				27AB4EBD1ECA06E900E5101E /* IITMBatteryLevel.swift */,
+				27AB4EBF1ECA06E900E5101E /* IITMDiskMetric.swift */,
+				27AB4EC01ECA06E900E5101E /* IITMNetworkReachability.swift */,
+				27AB4EBA1ECA054500E5101E /* IITMNativeRessources.c */,
+				27AB4EBB1ECA054500E5101E /* IITMNativeRessources.h */,
+				27ED22F81ED25C3C0082BA1D /* IITMLocationHandler.swift */,
+				27ED22FA1ED25CF80082BA1D /* IITMSSIDSniffer.swift */,
 			);
 			name = Metrics;
 			sourceTree = "<group>";
@@ -360,26 +359,26 @@
 			files = (
 				27AB4EB81ECA049000E5101E /* IITMMetricsController.swift in Sources */,
 				27ED23031EDCE8220082BA1D /* IITMRestManager.swift in Sources */,
-				27AB4E841EC9DB1900E5101E /* instrumentITiOS.xcdatamodeld in Sources */,
+				27AB4E841EC9DB1900E5101E /* ITTMinstrumentITiOS.xcdatamodeld in Sources */,
 				27ED22F31ECF2E6F0082BA1D /* IITMURLSessionInvocationInjection.swift in Sources */,
-				27ED22F91ED25C3C0082BA1D /* LocationHandler.swift in Sources */,
+				27ED22F91ED25C3C0082BA1D /* IITMLocationHandler.swift in Sources */,
 				2747F8B91ECB40A6008186D3 /* IITMSwizzledUIViewController.swift in Sources */,
 				27AB4EB61ECA039E00E5101E /* IITMInvocationSerializer.swift in Sources */,
 				27AB4EAE1EC9DB3A00E5101E /* IITMInvocation.swift in Sources */,
 				27ED22FE1EDCDE1B0082BA1D /* IITMDataStorage.swift in Sources */,
-				27AB4EC31ECA06E900E5101E /* DiskMetric.swift in Sources */,
+				27AB4EC31ECA06E900E5101E /* IITMDiskMetric.swift in Sources */,
 				27AB4EB01EC9DBB500E5101E /* IITMUtil.swift in Sources */,
-				27AB4EC11ECA06E900E5101E /* BatteryLevel.swift in Sources */,
+				27AB4EC11ECA06E900E5101E /* IITMBatteryLevel.swift in Sources */,
 				27ED23011EDCE2930082BA1D /* IITMConstants.swift in Sources */,
 				27AB4EB21EC9DC4600E5101E /* IITMAgent.swift in Sources */,
 				27ED22F51ED251200082BA1D /* IITMRemoteCall.swift in Sources */,
-				27AB4EC41ECA06E900E5101E /* NetworkReachability.swift in Sources */,
+				27AB4EC41ECA06E900E5101E /* IITMNetworkReachability.swift in Sources */,
 				27AB4EB41EC9EEEA00E5101E /* IITMInvocationMapper.swift in Sources */,
 				2747F92C1ECF07C6008186D3 /* IITMNSURLRequestTraceInjection.swift in Sources */,
 				27AB4E7E1EC9DB1900E5101E /* ViewController.swift in Sources */,
-				27AB4EBC1ECA054500E5101E /* NativeRessources.c in Sources */,
+				27AB4EBC1ECA054500E5101E /* IITMNativeRessources.c in Sources */,
 				27AB4E7C1EC9DB1900E5101E /* AppDelegate.swift in Sources */,
-				27ED22FB1ED25CF80082BA1D /* SSIDSniffer.swift in Sources */,
+				27ED22FB1ED25CF80082BA1D /* IITMSSIDSniffer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,12 +657,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		27AB4E821EC9DB1900E5101E /* IITMinstrumentITiOS.xcdatamodeld */ = {
+		27AB4E821EC9DB1900E5101E /* ITTMinstrumentITiOS.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				27AB4E831EC9DB1900E5101E /* IITMinstrumentITiOS.xcdatamodel */,
+				27AB4E831EC9DB1900E5101E /* instrumentITiOS.xcdatamodel */,
 			);
-			currentVersion = 27AB4E831EC9DB1900E5101E /* IITMinstrumentITiOS.xcdatamodel */;
+			currentVersion = 27AB4E831EC9DB1900E5101E /* instrumentITiOS.xcdatamodel */;
 			path = ITTMinstrumentITiOS.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
