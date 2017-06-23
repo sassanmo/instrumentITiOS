@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2747F8B91ECB40A6008186D3 /* SwizzledUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747F8B81ECB40A6008186D3 /* SwizzledUIViewController.swift */; };
-		2747F92C1ECF07C6008186D3 /* NSURLRequestTraceInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747F92B1ECF07C6008186D3 /* NSURLRequestTraceInjection.swift */; };
+		2747F8B91ECB40A6008186D3 /* IITMSwizzledUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747F8B81ECB40A6008186D3 /* IITMSwizzledUIViewController.swift */; };
+		2747F92C1ECF07C6008186D3 /* IITMNSURLRequestTraceInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2747F92B1ECF07C6008186D3 /* IITMNSURLRequestTraceInjection.swift */; };
 		27AB4E7C1EC9DB1900E5101E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4E7B1EC9DB1900E5101E /* AppDelegate.swift */; };
 		27AB4E7E1EC9DB1900E5101E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4E7D1EC9DB1900E5101E /* ViewController.swift */; };
 		27AB4E811EC9DB1900E5101E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27AB4E7F1EC9DB1900E5101E /* Main.storyboard */; };
@@ -17,25 +17,25 @@
 		27AB4E891EC9DB1900E5101E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27AB4E871EC9DB1900E5101E /* LaunchScreen.storyboard */; };
 		27AB4E941EC9DB1900E5101E /* InvocationMappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4E931EC9DB1900E5101E /* InvocationMappingTests.swift */; };
 		27AB4E9F1EC9DB1900E5101E /* AutomaticInvocationTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4E9E1EC9DB1900E5101E /* AutomaticInvocationTrackerUITests.swift */; };
-		27AB4EAE1EC9DB3A00E5101E /* Invocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EAD1EC9DB3A00E5101E /* Invocation.swift */; };
-		27AB4EB01EC9DBB500E5101E /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EAF1EC9DBB500E5101E /* Util.swift */; };
-		27AB4EB21EC9DC4600E5101E /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EB11EC9DC4600E5101E /* Agent.swift */; };
-		27AB4EB41EC9EEEA00E5101E /* InvocationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EB31EC9EEEA00E5101E /* InvocationMapper.swift */; };
-		27AB4EB61ECA039E00E5101E /* InvocationSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EB51ECA039E00E5101E /* InvocationSerializer.swift */; };
-		27AB4EB81ECA049000E5101E /* MetricsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EB71ECA049000E5101E /* MetricsController.swift */; };
+		27AB4EAE1EC9DB3A00E5101E /* IITMInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EAD1EC9DB3A00E5101E /* IITMInvocation.swift */; };
+		27AB4EB01EC9DBB500E5101E /* IITMUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EAF1EC9DBB500E5101E /* IITMUtil.swift */; };
+		27AB4EB21EC9DC4600E5101E /* IITMAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EB11EC9DC4600E5101E /* IITMAgent.swift */; };
+		27AB4EB41EC9EEEA00E5101E /* IITMInvocationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EB31EC9EEEA00E5101E /* IITMInvocationMapper.swift */; };
+		27AB4EB61ECA039E00E5101E /* IITMInvocationSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EB51ECA039E00E5101E /* IITMInvocationSerializer.swift */; };
+		27AB4EB81ECA049000E5101E /* IITMMetricsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EB71ECA049000E5101E /* IITMMetricsController.swift */; };
 		27AB4EBC1ECA054500E5101E /* NativeRessources.c in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EBA1ECA054500E5101E /* NativeRessources.c */; };
 		27AB4EC11ECA06E900E5101E /* BatteryLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EBD1ECA06E900E5101E /* BatteryLevel.swift */; };
 		27AB4EC31ECA06E900E5101E /* DiskMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EBF1ECA06E900E5101E /* DiskMetric.swift */; };
 		27AB4EC41ECA06E900E5101E /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AB4EC01ECA06E900E5101E /* NetworkReachability.swift */; };
 		27D0AB121EECB8040061D35C /* InvocationSerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D0AB111EECB8040061D35C /* InvocationSerializerTests.swift */; };
 		27D0AB141EECBDA40061D35C /* InvocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D0AB131EECBDA40061D35C /* InvocationTests.swift */; };
-		27ED22F31ECF2E6F0082BA1D /* URLSessionInvocationInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22F21ECF2E6F0082BA1D /* URLSessionInvocationInjection.swift */; };
-		27ED22F51ED251200082BA1D /* RemoteCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22F41ED251200082BA1D /* RemoteCall.swift */; };
+		27ED22F31ECF2E6F0082BA1D /* IITMURLSessionInvocationInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22F21ECF2E6F0082BA1D /* IITMURLSessionInvocationInjection.swift */; };
+		27ED22F51ED251200082BA1D /* IITMRemoteCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22F41ED251200082BA1D /* IITMRemoteCall.swift */; };
 		27ED22F91ED25C3C0082BA1D /* LocationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22F81ED25C3C0082BA1D /* LocationHandler.swift */; };
 		27ED22FB1ED25CF80082BA1D /* SSIDSniffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22FA1ED25CF80082BA1D /* SSIDSniffer.swift */; };
-		27ED22FE1EDCDE1B0082BA1D /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22FD1EDCDE1B0082BA1D /* DataStorage.swift */; };
-		27ED23011EDCE2930082BA1D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED23001EDCE2930082BA1D /* Constants.swift */; };
-		27ED23031EDCE8220082BA1D /* RestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED23021EDCE8220082BA1D /* RestManager.swift */; };
+		27ED22FE1EDCDE1B0082BA1D /* IITMDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED22FD1EDCDE1B0082BA1D /* IITMDataStorage.swift */; };
+		27ED23011EDCE2930082BA1D /* IITMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED23001EDCE2930082BA1D /* IITMConstants.swift */; };
+		27ED23031EDCE8220082BA1D /* IITMRestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ED23021EDCE8220082BA1D /* IITMRestManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2747F8B81ECB40A6008186D3 /* SwizzledUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwizzledUIViewController.swift; sourceTree = "<group>"; };
-		2747F92B1ECF07C6008186D3 /* NSURLRequestTraceInjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSURLRequestTraceInjection.swift; sourceTree = "<group>"; };
-		27AB4E781EC9DB1900E5101E /* AutomaticInvocationTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutomaticInvocationTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2747F8B81ECB40A6008186D3 /* IITMSwizzledUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMSwizzledUIViewController.swift; sourceTree = "<group>"; };
+		2747F92B1ECF07C6008186D3 /* IITMNSURLRequestTraceInjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMNSURLRequestTraceInjection.swift; sourceTree = "<group>"; };
+		27AB4E781EC9DB1900E5101E /* instrumentITiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instrumentITiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27AB4E7B1EC9DB1900E5101E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27AB4E7D1EC9DB1900E5101E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27AB4E801EC9DB1900E5101E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,18 +66,18 @@
 		27AB4E851EC9DB1900E5101E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27AB4E881EC9DB1900E5101E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27AB4E8A1EC9DB1900E5101E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27AB4E8F1EC9DB1900E5101E /* AutomaticInvocationTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutomaticInvocationTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27AB4E8F1EC9DB1900E5101E /* instrumentITiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instrumentITiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27AB4E931EC9DB1900E5101E /* InvocationMappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvocationMappingTests.swift; sourceTree = "<group>"; };
 		27AB4E951EC9DB1900E5101E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27AB4E9A1EC9DB1900E5101E /* AutomaticInvocationTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutomaticInvocationTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27AB4E9A1EC9DB1900E5101E /* instrumentITiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = instrumentITiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27AB4E9E1EC9DB1900E5101E /* AutomaticInvocationTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomaticInvocationTrackerUITests.swift; sourceTree = "<group>"; };
 		27AB4EA01EC9DB1900E5101E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27AB4EAD1EC9DB3A00E5101E /* Invocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invocation.swift; sourceTree = "<group>"; };
-		27AB4EAF1EC9DBB500E5101E /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
-		27AB4EB11EC9DC4600E5101E /* Agent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
-		27AB4EB31EC9EEEA00E5101E /* InvocationMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvocationMapper.swift; sourceTree = "<group>"; };
-		27AB4EB51ECA039E00E5101E /* InvocationSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvocationSerializer.swift; sourceTree = "<group>"; };
-		27AB4EB71ECA049000E5101E /* MetricsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetricsController.swift; sourceTree = "<group>"; };
+		27AB4EAD1EC9DB3A00E5101E /* IITMInvocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMInvocation.swift; sourceTree = "<group>"; };
+		27AB4EAF1EC9DBB500E5101E /* IITMUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMUtil.swift; sourceTree = "<group>"; };
+		27AB4EB11EC9DC4600E5101E /* IITMAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMAgent.swift; sourceTree = "<group>"; };
+		27AB4EB31EC9EEEA00E5101E /* IITMInvocationMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMInvocationMapper.swift; sourceTree = "<group>"; };
+		27AB4EB51ECA039E00E5101E /* IITMInvocationSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMInvocationSerializer.swift; sourceTree = "<group>"; };
+		27AB4EB71ECA049000E5101E /* IITMMetricsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMMetricsController.swift; sourceTree = "<group>"; };
 		27AB4EB91ECA054500E5101E /* AutomaticInvocationTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AutomaticInvocationTracker-Bridging-Header.h"; sourceTree = "<group>"; };
 		27AB4EBA1ECA054500E5101E /* NativeRessources.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NativeRessources.c; sourceTree = "<group>"; };
 		27AB4EBB1ECA054500E5101E /* NativeRessources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeRessources.h; sourceTree = "<group>"; };
@@ -86,13 +86,13 @@
 		27AB4EC01ECA06E900E5101E /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
 		27D0AB111EECB8040061D35C /* InvocationSerializerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvocationSerializerTests.swift; sourceTree = "<group>"; };
 		27D0AB131EECBDA40061D35C /* InvocationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvocationTests.swift; sourceTree = "<group>"; };
-		27ED22F21ECF2E6F0082BA1D /* URLSessionInvocationInjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionInvocationInjection.swift; sourceTree = "<group>"; };
-		27ED22F41ED251200082BA1D /* RemoteCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteCall.swift; sourceTree = "<group>"; };
+		27ED22F21ECF2E6F0082BA1D /* IITMURLSessionInvocationInjection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMURLSessionInvocationInjection.swift; sourceTree = "<group>"; };
+		27ED22F41ED251200082BA1D /* IITMRemoteCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMRemoteCall.swift; sourceTree = "<group>"; };
 		27ED22F81ED25C3C0082BA1D /* LocationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHandler.swift; sourceTree = "<group>"; };
 		27ED22FA1ED25CF80082BA1D /* SSIDSniffer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSIDSniffer.swift; sourceTree = "<group>"; };
-		27ED22FD1EDCDE1B0082BA1D /* DataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
-		27ED23001EDCE2930082BA1D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		27ED23021EDCE8220082BA1D /* RestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestManager.swift; sourceTree = "<group>"; };
+		27ED22FD1EDCDE1B0082BA1D /* IITMDataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMDataStorage.swift; sourceTree = "<group>"; };
+		27ED23001EDCE2930082BA1D /* IITMConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMConstants.swift; sourceTree = "<group>"; };
+		27ED23021EDCE8220082BA1D /* IITMRestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IITMRestManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +123,7 @@
 		27AB4E6F1EC9DB1900E5101E = {
 			isa = PBXGroup;
 			children = (
-				27AB4E7A1EC9DB1900E5101E /* AutomaticInvocationTracker */,
+				27AB4E7A1EC9DB1900E5101E /* instrumentITiOS */,
 				27AB4E921EC9DB1900E5101E /* AutomaticInvocationTrackerTests */,
 				27AB4E9D1EC9DB1900E5101E /* AutomaticInvocationTrackerUITests */,
 				27AB4E791EC9DB1900E5101E /* Products */,
@@ -133,14 +133,14 @@
 		27AB4E791EC9DB1900E5101E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				27AB4E781EC9DB1900E5101E /* AutomaticInvocationTracker.app */,
-				27AB4E8F1EC9DB1900E5101E /* AutomaticInvocationTrackerTests.xctest */,
-				27AB4E9A1EC9DB1900E5101E /* AutomaticInvocationTrackerUITests.xctest */,
+				27AB4E781EC9DB1900E5101E /* instrumentITiOS.app */,
+				27AB4E8F1EC9DB1900E5101E /* instrumentITiOSTests.xctest */,
+				27AB4E9A1EC9DB1900E5101E /* instrumentITiOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		27AB4E7A1EC9DB1900E5101E /* AutomaticInvocationTracker */ = {
+		27AB4E7A1EC9DB1900E5101E /* instrumentITiOS */ = {
 			isa = PBXGroup;
 			children = (
 				27ED22FC1ED78A250082BA1D /* Swizzling */,
@@ -153,6 +153,7 @@
 				27AB4E8A1EC9DB1900E5101E /* Info.plist */,
 				27AB4E821EC9DB1900E5101E /* AutomaticInvocationTracker.xcdatamodeld */,
 			);
+			name = instrumentITiOS;
 			path = AutomaticInvocationTracker;
 			sourceTree = "<group>";
 		};
@@ -180,17 +181,17 @@
 			isa = PBXGroup;
 			children = (
 				27ED22FF1EDCE17A0082BA1D /* Metrics */,
-				27AB4EAD1EC9DB3A00E5101E /* Invocation.swift */,
-				27AB4EAF1EC9DBB500E5101E /* Util.swift */,
-				27AB4EB11EC9DC4600E5101E /* Agent.swift */,
-				27AB4EB31EC9EEEA00E5101E /* InvocationMapper.swift */,
-				27AB4EB51ECA039E00E5101E /* InvocationSerializer.swift */,
-				27ED22FD1EDCDE1B0082BA1D /* DataStorage.swift */,
-				27AB4EB71ECA049000E5101E /* MetricsController.swift */,
+				27AB4EAD1EC9DB3A00E5101E /* IITMInvocation.swift */,
+				27AB4EAF1EC9DBB500E5101E /* IITMUtil.swift */,
+				27AB4EB11EC9DC4600E5101E /* IITMAgent.swift */,
+				27AB4EB31EC9EEEA00E5101E /* IITMInvocationMapper.swift */,
+				27AB4EB51ECA039E00E5101E /* IITMInvocationSerializer.swift */,
+				27ED22FD1EDCDE1B0082BA1D /* IITMDataStorage.swift */,
+				27AB4EB71ECA049000E5101E /* IITMMetricsController.swift */,
 				27AB4EB91ECA054500E5101E /* AutomaticInvocationTracker-Bridging-Header.h */,
-				27ED22F41ED251200082BA1D /* RemoteCall.swift */,
-				27ED23001EDCE2930082BA1D /* Constants.swift */,
-				27ED23021EDCE8220082BA1D /* RestManager.swift */,
+				27ED22F41ED251200082BA1D /* IITMRemoteCall.swift */,
+				27ED23001EDCE2930082BA1D /* IITMConstants.swift */,
+				27ED23021EDCE8220082BA1D /* IITMRestManager.swift */,
 			);
 			name = Agent;
 			sourceTree = "<group>";
@@ -198,9 +199,9 @@
 		27ED22FC1ED78A250082BA1D /* Swizzling */ = {
 			isa = PBXGroup;
 			children = (
-				2747F8B81ECB40A6008186D3 /* SwizzledUIViewController.swift */,
-				2747F92B1ECF07C6008186D3 /* NSURLRequestTraceInjection.swift */,
-				27ED22F21ECF2E6F0082BA1D /* URLSessionInvocationInjection.swift */,
+				2747F8B81ECB40A6008186D3 /* IITMSwizzledUIViewController.swift */,
+				2747F92B1ECF07C6008186D3 /* IITMNSURLRequestTraceInjection.swift */,
+				27ED22F21ECF2E6F0082BA1D /* IITMURLSessionInvocationInjection.swift */,
 			);
 			name = Swizzling;
 			sourceTree = "<group>";
@@ -222,9 +223,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		27AB4E771EC9DB1900E5101E /* AutomaticInvocationTracker */ = {
+		27AB4E771EC9DB1900E5101E /* instrumentITiOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27AB4EA31EC9DB1900E5101E /* Build configuration list for PBXNativeTarget "AutomaticInvocationTracker" */;
+			buildConfigurationList = 27AB4EA31EC9DB1900E5101E /* Build configuration list for PBXNativeTarget "instrumentITiOS" */;
 			buildPhases = (
 				27AB4E741EC9DB1900E5101E /* Sources */,
 				27AB4E751EC9DB1900E5101E /* Frameworks */,
@@ -234,14 +235,14 @@
 			);
 			dependencies = (
 			);
-			name = AutomaticInvocationTracker;
+			name = instrumentITiOS;
 			productName = AutomaticInvocationTracker;
-			productReference = 27AB4E781EC9DB1900E5101E /* AutomaticInvocationTracker.app */;
+			productReference = 27AB4E781EC9DB1900E5101E /* instrumentITiOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		27AB4E8E1EC9DB1900E5101E /* AutomaticInvocationTrackerTests */ = {
+		27AB4E8E1EC9DB1900E5101E /* instrumentITiOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27AB4EA61EC9DB1900E5101E /* Build configuration list for PBXNativeTarget "AutomaticInvocationTrackerTests" */;
+			buildConfigurationList = 27AB4EA61EC9DB1900E5101E /* Build configuration list for PBXNativeTarget "instrumentITiOSTests" */;
 			buildPhases = (
 				27AB4E8B1EC9DB1900E5101E /* Sources */,
 				27AB4E8C1EC9DB1900E5101E /* Frameworks */,
@@ -252,14 +253,14 @@
 			dependencies = (
 				27AB4E911EC9DB1900E5101E /* PBXTargetDependency */,
 			);
-			name = AutomaticInvocationTrackerTests;
+			name = instrumentITiOSTests;
 			productName = AutomaticInvocationTrackerTests;
-			productReference = 27AB4E8F1EC9DB1900E5101E /* AutomaticInvocationTrackerTests.xctest */;
+			productReference = 27AB4E8F1EC9DB1900E5101E /* instrumentITiOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		27AB4E991EC9DB1900E5101E /* AutomaticInvocationTrackerUITests */ = {
+		27AB4E991EC9DB1900E5101E /* instrumentITiOSUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 27AB4EA91EC9DB1900E5101E /* Build configuration list for PBXNativeTarget "AutomaticInvocationTrackerUITests" */;
+			buildConfigurationList = 27AB4EA91EC9DB1900E5101E /* Build configuration list for PBXNativeTarget "instrumentITiOSUITests" */;
 			buildPhases = (
 				27AB4E961EC9DB1900E5101E /* Sources */,
 				27AB4E971EC9DB1900E5101E /* Frameworks */,
@@ -270,9 +271,9 @@
 			dependencies = (
 				27AB4E9C1EC9DB1900E5101E /* PBXTargetDependency */,
 			);
-			name = AutomaticInvocationTrackerUITests;
+			name = instrumentITiOSUITests;
 			productName = AutomaticInvocationTrackerUITests;
-			productReference = 27AB4E9A1EC9DB1900E5101E /* AutomaticInvocationTrackerUITests.xctest */;
+			productReference = 27AB4E9A1EC9DB1900E5101E /* instrumentITiOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -305,7 +306,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 27AB4E731EC9DB1900E5101E /* Build configuration list for PBXProject "AutomaticInvocationTracker" */;
+			buildConfigurationList = 27AB4E731EC9DB1900E5101E /* Build configuration list for PBXProject "instrumentITiOS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -318,9 +319,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				27AB4E771EC9DB1900E5101E /* AutomaticInvocationTracker */,
-				27AB4E8E1EC9DB1900E5101E /* AutomaticInvocationTrackerTests */,
-				27AB4E991EC9DB1900E5101E /* AutomaticInvocationTrackerUITests */,
+				27AB4E771EC9DB1900E5101E /* instrumentITiOS */,
+				27AB4E8E1EC9DB1900E5101E /* instrumentITiOSTests */,
+				27AB4E991EC9DB1900E5101E /* instrumentITiOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -357,24 +358,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27AB4EB81ECA049000E5101E /* MetricsController.swift in Sources */,
-				27ED23031EDCE8220082BA1D /* RestManager.swift in Sources */,
+				27AB4EB81ECA049000E5101E /* IITMMetricsController.swift in Sources */,
+				27ED23031EDCE8220082BA1D /* IITMRestManager.swift in Sources */,
 				27AB4E841EC9DB1900E5101E /* AutomaticInvocationTracker.xcdatamodeld in Sources */,
-				27ED22F31ECF2E6F0082BA1D /* URLSessionInvocationInjection.swift in Sources */,
+				27ED22F31ECF2E6F0082BA1D /* IITMURLSessionInvocationInjection.swift in Sources */,
 				27ED22F91ED25C3C0082BA1D /* LocationHandler.swift in Sources */,
-				2747F8B91ECB40A6008186D3 /* SwizzledUIViewController.swift in Sources */,
-				27AB4EB61ECA039E00E5101E /* InvocationSerializer.swift in Sources */,
-				27AB4EAE1EC9DB3A00E5101E /* Invocation.swift in Sources */,
-				27ED22FE1EDCDE1B0082BA1D /* DataStorage.swift in Sources */,
+				2747F8B91ECB40A6008186D3 /* IITMSwizzledUIViewController.swift in Sources */,
+				27AB4EB61ECA039E00E5101E /* IITMInvocationSerializer.swift in Sources */,
+				27AB4EAE1EC9DB3A00E5101E /* IITMInvocation.swift in Sources */,
+				27ED22FE1EDCDE1B0082BA1D /* IITMDataStorage.swift in Sources */,
 				27AB4EC31ECA06E900E5101E /* DiskMetric.swift in Sources */,
-				27AB4EB01EC9DBB500E5101E /* Util.swift in Sources */,
+				27AB4EB01EC9DBB500E5101E /* IITMUtil.swift in Sources */,
 				27AB4EC11ECA06E900E5101E /* BatteryLevel.swift in Sources */,
-				27ED23011EDCE2930082BA1D /* Constants.swift in Sources */,
-				27AB4EB21EC9DC4600E5101E /* Agent.swift in Sources */,
-				27ED22F51ED251200082BA1D /* RemoteCall.swift in Sources */,
+				27ED23011EDCE2930082BA1D /* IITMConstants.swift in Sources */,
+				27AB4EB21EC9DC4600E5101E /* IITMAgent.swift in Sources */,
+				27ED22F51ED251200082BA1D /* IITMRemoteCall.swift in Sources */,
 				27AB4EC41ECA06E900E5101E /* NetworkReachability.swift in Sources */,
-				27AB4EB41EC9EEEA00E5101E /* InvocationMapper.swift in Sources */,
-				2747F92C1ECF07C6008186D3 /* NSURLRequestTraceInjection.swift in Sources */,
+				27AB4EB41EC9EEEA00E5101E /* IITMInvocationMapper.swift in Sources */,
+				2747F92C1ECF07C6008186D3 /* IITMNSURLRequestTraceInjection.swift in Sources */,
 				27AB4E7E1EC9DB1900E5101E /* ViewController.swift in Sources */,
 				27AB4EBC1ECA054500E5101E /* NativeRessources.c in Sources */,
 				27AB4E7C1EC9DB1900E5101E /* AppDelegate.swift in Sources */,
@@ -405,12 +406,12 @@
 /* Begin PBXTargetDependency section */
 		27AB4E911EC9DB1900E5101E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 27AB4E771EC9DB1900E5101E /* AutomaticInvocationTracker */;
+			target = 27AB4E771EC9DB1900E5101E /* instrumentITiOS */;
 			targetProxy = 27AB4E901EC9DB1900E5101E /* PBXContainerItemProxy */;
 		};
 		27AB4E9C1EC9DB1900E5101E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 27AB4E771EC9DB1900E5101E /* AutomaticInvocationTracker */;
+			target = 27AB4E771EC9DB1900E5101E /* instrumentITiOS */;
 			targetProxy = 27AB4E9B1EC9DB1900E5101E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -534,7 +535,7 @@
 				DEVELOPMENT_TEAM = 8PYY9ZFVYZ;
 				INFOPLIST_FILE = AutomaticInvocationTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.matteosassano.AutomaticInvocationTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matteosassano.instrumentITiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AutomaticInvocationTracker/AutomaticInvocationTracker-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -550,7 +551,7 @@
 				DEVELOPMENT_TEAM = 8PYY9ZFVYZ;
 				INFOPLIST_FILE = AutomaticInvocationTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.matteosassano.AutomaticInvocationTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.matteosassano.instrumentITiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AutomaticInvocationTracker/AutomaticInvocationTracker-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -568,7 +569,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.matteosassano.AutomaticInvocationTrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutomaticInvocationTracker.app/AutomaticInvocationTracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/instrumentITiOS.app/instrumentITiOS";
 			};
 			name = Debug;
 		};
@@ -583,7 +584,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.matteosassano.AutomaticInvocationTrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutomaticInvocationTracker.app/AutomaticInvocationTracker";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/instrumentITiOS.app/instrumentITiOS";
 			};
 			name = Release;
 		};
@@ -618,7 +619,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		27AB4E731EC9DB1900E5101E /* Build configuration list for PBXProject "AutomaticInvocationTracker" */ = {
+		27AB4E731EC9DB1900E5101E /* Build configuration list for PBXProject "instrumentITiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27AB4EA11EC9DB1900E5101E /* Debug */,
@@ -627,7 +628,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27AB4EA31EC9DB1900E5101E /* Build configuration list for PBXNativeTarget "AutomaticInvocationTracker" */ = {
+		27AB4EA31EC9DB1900E5101E /* Build configuration list for PBXNativeTarget "instrumentITiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27AB4EA41EC9DB1900E5101E /* Debug */,
@@ -636,7 +637,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27AB4EA61EC9DB1900E5101E /* Build configuration list for PBXNativeTarget "AutomaticInvocationTrackerTests" */ = {
+		27AB4EA61EC9DB1900E5101E /* Build configuration list for PBXNativeTarget "instrumentITiOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27AB4EA71EC9DB1900E5101E /* Debug */,
@@ -645,7 +646,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		27AB4EA91EC9DB1900E5101E /* Build configuration list for PBXNativeTarget "AutomaticInvocationTrackerUITests" */ = {
+		27AB4EA91EC9DB1900E5101E /* Build configuration list for PBXNativeTarget "instrumentITiOSUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				27AB4EAA1EC9DB1900E5101E /* Debug */,

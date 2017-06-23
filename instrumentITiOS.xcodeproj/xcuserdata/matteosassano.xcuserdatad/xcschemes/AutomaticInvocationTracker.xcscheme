@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "27AB4E771EC9DB1900E5101E"
-               BuildableName = "AutomaticInvocationTracker.app"
-               BlueprintName = "AutomaticInvocationTracker"
-               ReferencedContainer = "container:AutomaticInvocationTracker.xcodeproj">
+               BuildableName = "instrumentITiOS.app"
+               BlueprintName = "instrumentITiOS"
+               ReferencedContainer = "container:instrumentITiOS.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "27AB4E8E1EC9DB1900E5101E"
-               BuildableName = "AutomaticInvocationTrackerTests.xctest"
-               BlueprintName = "AutomaticInvocationTrackerTests"
-               ReferencedContainer = "container:AutomaticInvocationTracker.xcodeproj">
+               BuildableName = "instrumentITiOSTests.xctest"
+               BlueprintName = "instrumentITiOSTests"
+               ReferencedContainer = "container:instrumentITiOS.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "27AB4E991EC9DB1900E5101E"
-               BuildableName = "AutomaticInvocationTrackerUITests.xctest"
-               BlueprintName = "AutomaticInvocationTrackerUITests"
-               ReferencedContainer = "container:AutomaticInvocationTracker.xcodeproj">
+               BuildableName = "instrumentITiOSUITests.xctest"
+               BlueprintName = "instrumentITiOSUITests"
+               ReferencedContainer = "container:instrumentITiOS.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "27AB4E771EC9DB1900E5101E"
-            BuildableName = "AutomaticInvocationTracker.app"
-            BlueprintName = "AutomaticInvocationTracker"
-            ReferencedContainer = "container:AutomaticInvocationTracker.xcodeproj">
+            BuildableName = "instrumentITiOS.app"
+            BlueprintName = "instrumentITiOS"
+            ReferencedContainer = "container:instrumentITiOS.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "27AB4E771EC9DB1900E5101E"
-            BuildableName = "AutomaticInvocationTracker.app"
-            BlueprintName = "AutomaticInvocationTracker"
-            ReferencedContainer = "container:AutomaticInvocationTracker.xcodeproj">
+            BuildableName = "instrumentITiOS.app"
+            BlueprintName = "instrumentITiOS"
+            ReferencedContainer = "container:instrumentITiOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "27AB4E771EC9DB1900E5101E"
-            BuildableName = "AutomaticInvocationTracker.app"
-            BlueprintName = "AutomaticInvocationTracker"
-            ReferencedContainer = "container:AutomaticInvocationTracker.xcodeproj">
+            BuildableName = "instrumentITiOS.app"
+            BlueprintName = "instrumentITiOS"
+            ReferencedContainer = "container:instrumentITiOS.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
